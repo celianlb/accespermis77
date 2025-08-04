@@ -30,7 +30,10 @@ export const Step = () => {
       />
       <div className="flex flex-col md:flex-row lg:flex-col gap-8">
         {steps.map((step) => (
-          <div key={step.title} className="flex gap-2 items-start ">
+          <div
+            key={step.title}
+            className="flex gap-2 items-center md:items-start xl:items-center"
+          >
             <div
               className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center"
               style={{ backgroundColor: step.bgColor }}

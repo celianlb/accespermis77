@@ -1,5 +1,6 @@
 import { CTA } from "@/components/ui/CTA";
 import { CheckIcon } from "./CheckIcon";
+
 interface PropsFormules {
   title: string;
   description: string;
@@ -66,7 +67,7 @@ export const Card = ({
           <div className="flex flex-col items-center">
             <p
               className={`text-[32px] font-extrabold ${
-                isOrange ? "text-white" : "text-gray-900"
+                isOrange ? "text-white" : "text-primary"
               }`}
             >
               {title}
@@ -115,7 +116,7 @@ export const Card = ({
 
 export const CardList = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {list.map((item, index) => (
         <Card key={index} {...item} />
       ))}
