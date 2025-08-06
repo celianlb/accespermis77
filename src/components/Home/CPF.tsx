@@ -15,7 +15,7 @@ export const CPF = () => {
       <div className="flex flex-col gap-10 items-center">
         <h3 className="text-[24px] md:text-[40px] font-sans font-extrabold mx-auto">
           Finance ton permis <br />
-          avec ton compte CPF (valable uniquement sur les permis moto) !
+          avec ton compte CPF (valable uniquement sur les permis voiture) !
         </h3>
       </div>
       <Image
