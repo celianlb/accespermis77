@@ -16,7 +16,7 @@ export const HeroSection = () => {
       </div>
       <div className="flex justify-center xl:justify-between">
         <Image
-          src={"/img/voiture-acces-permis77.png"}
+          src={"/img/voiture-acces-permis77.svg"}
           width={544}
           height={373}
           alt="Voiture Accès Permis 77"
