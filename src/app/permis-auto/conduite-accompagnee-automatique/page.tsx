@@ -1,5 +1,6 @@
 import AdvantagesSection from "@/components/Pages/AdvantagesSection";
 import CTASection from "@/components/Pages/CTASection";
+import DescriptionSection from "@/components/Pages/DescriptionSection";
 import HeroSection from "@/components/Pages/HeroSection";
 import PricingSection from "@/components/Pages/PricingSection";
 import { Metadata } from "next";
@@ -215,6 +216,15 @@ export default function ConduiteAccompagneeAutomatique() {
           }
         ]}
         conditions={conditions}
+      />
+
+      <DescriptionSection
+        title="conduite accompagnée automatique"
+        whatIsIt="La conduite accompagnée automatique (AAC) combine les avantages de l'apprentissage anticipé dès 15 ans avec la simplicité de la boîte automatique. Cette formation permet d'acquérir une expérience de conduite de 3000 km minimum avec un accompagnateur, sans la complexité de la gestion d'embrayage et des changements de vitesses."
+        whatIsItFor="Cette formule sert à bénéficier du meilleur des deux mondes : l'expérience enrichissante de la conduite accompagnée et la facilité de l'automatique. Idéale pour une approche sereine et progressive de la conduite, elle permet de se concentrer sur la sécurité et les règles de circulation tout en développant ses réflexes de conducteur."
+        whatIsItImage="/img/permis/voiture.png"
+        whatIsItForImage="/img/permis/licence-driver.svg"
+        bgColor="bg-gray-50"
       />
 
       <AdvantagesSection

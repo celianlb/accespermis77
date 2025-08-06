@@ -4,9 +4,10 @@ interface CardProps {
   title: string;
   price: number;
   classname?: string;
+  link?: string;
 }
 
-export const Card = ({ title, price, classname }: CardProps) => {
+export const Card = ({ title, price, classname, link }: CardProps) => {
   return (
     <div
       className={`flex flex-col z-10 justify-between p-10 h-[280px] bg-white rounded-lg w-fit font-medium ${classname}`}
@@ -18,7 +19,7 @@ export const Card = ({ title, price, classname }: CardProps) => {
           <p className=" text-secondary text-5xl font-bold">{price}€</p>
         </div>
       </div>
-      <CTA>Je découvre</CTA>
+      <CTA href={link}>Je découvre</CTA>
     </div>
   );
 };

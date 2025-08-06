@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { CTA } from "../ui/CTA";
 import { Section } from "../ui/Section";
 
 export const CPF = () => {
@@ -16,11 +15,8 @@ export const CPF = () => {
       <div className="flex flex-col gap-10 items-center">
         <h3 className="text-[24px] md:text-[40px] font-sans font-extrabold mx-auto">
           Finance ton permis <br />
-          avec ton compte CPF* !
+          avec ton compte CPF (valable uniquement sur les permis moto) !
         </h3>
-        <CTA classname="w-fit p-[18px]" variant="secondary">
-          Découvrir les offres
-        </CTA>
       </div>
       <Image
         src={"/img/cpf-certification.png"}

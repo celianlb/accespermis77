@@ -116,7 +116,7 @@ export default function HeroSection({
                   )}
                 </div>
               </div>
-              <CTA classname="text-sm py-2">Je découvre</CTA>
+              <CTA className="text-sm py-2">Je découvre</CTA>
             </div>
           ))}
         </div>

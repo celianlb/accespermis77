@@ -1,4 +1,16 @@
+import AdvantagesSection from "@/components/Pages/AdvantagesSection";
+import CTASection from "@/components/Pages/CTASection";
+import DescriptionSection from "@/components/Pages/DescriptionSection";
+import HeroSection from "@/components/Pages/HeroSection";
+import PricingSection from "@/components/Pages/PricingSection";
 import { Metadata } from "next";
+import { FaMotorcycle, FaClock, FaShieldAlt, FaUserGraduate } from "react-icons/fa";
+import {
+  MdDateRange,
+  MdDirectionsCar,
+  MdLockOpen,
+  MdStart,
+} from "react-icons/md";
 
 export const metadata: Metadata = {
   title: "Permis 125 A1 - Formation moto légère - Accès Permis 77",
@@ -6,152 +18,187 @@ export const metadata: Metadata = {
 };
 
 export default function Permis125A1() {
+  const conditions = [
+    {
+      label: "Âge minimum",
+      value: "16 ans",
+      icon: <MdDateRange />,
+    },
+    {
+      label: "Code moto requis",
+      value: "ETM obligatoire",
+      icon: <MdDirectionsCar />,
+    },
+    {
+      label: "Formation pratique",
+      value: "20h (8h + 12h)",
+      icon: <MdLockOpen />,
+    },
+    {
+      label: "Permis probatoire",
+      value: "3 ans",
+      icon: <MdStart />,
+    },
+  ];
+
+  const advantages = [
+    {
+      title: "Motos 125cc accessibles",
+      description:
+        "Conduisez des motocyclettes jusqu'à 125cm³ et 11kW, parfaites pour débuter en deux-roues",
+      icon: <FaMotorcycle />,
+    },
+    {
+      title: "Moniteurs spécialisés moto",
+      description:
+        "Équipe pédagogique expérimentée dans la formation moto et la sécurité deux-roues",
+      icon: <FaUserGraduate />,
+    },
+    {
+      title: "Formation progressive",
+      description:
+        "Apprentissage étape par étape : plateau puis circulation pour une maîtrise complète",
+      icon: <FaClock />,
+    },
+    {
+      title: "Sécurité prioritaire",
+      description:
+        "Formation aux équipements de protection et aux spécificités de la conduite moto",
+      icon: <FaShieldAlt />,
+    },
+  ];
+
+  const packages = [
+    {
+      name: "Permis A1 - 125cc",
+      price: "900€",
+      duration: "Formation complète",
+      features: [
+        "Frais de gestion inclus",
+        "Fournitures pédagogiques complètes",
+        "8h de conduite hors circulation (plateau)",
+        "12h de conduite en circulation",
+        "Présentation examen plateau incluse",
+        "Présentation examen circulation incluse",
+      ],
+      highlighted: true,
+      badge: "Formation complète",
+    },
+  ];
+
+  const includedItems = [
+    {
+      label: "Frais de gestion",
+      included: true,
+      description: "Toutes les démarches administratives",
+    },
+    {
+      label: "Fournitures pédagogiques",
+      included: true,
+      description: "Livret d'apprentissage et supports de cours",
+    },
+    {
+      label: "Formation hors circulation",
+      included: true,
+      description: "8 heures de plateau (maniabilité, freinage)",
+    },
+    {
+      label: "Formation en circulation",
+      included: true,
+      description: "12 heures de conduite en situation réelle",
+    },
+    {
+      label: "Présentation examen plateau",
+      included: true,
+      description: "Inscription et présentation incluses",
+    },
+    {
+      label: "Présentation examen circulation",
+      included: true,
+      description: "Inscription et présentation incluses",
+    },
+    {
+      label: "Évaluation de départ",
+      price: "25€",
+      description: "Obligatoire - non incluse dans le forfait",
+    },
+    {
+      label: "Code moto (ETM)",
+      price: "Variable",
+      description: "À prévoir en supplément",
+    },
+  ];
+
+  const paymentOptions = [
+    {
+      hours: "Permis A1 - 125cc",
+      schedule: [
+        {
+          step: "À l'inscription",
+          amount: "900€",
+          description: "Paiement unique pour la formation complète",
+        },
+      ]
+    }
+  ];
+
+  const additionalInfo = [
+    "Code moto (ETM) obligatoire avant de commencer la formation pratique",
+    "Évaluation de départ obligatoire à 25€ (non incluse dans le prix)",
+    "Formation sur motos écoles 125cc récentes et entretenues",
+    "Taux de réussite élevé grâce à notre méthode pédagogique éprouvée",
+    "Équipements de protection fournis pendant la formation",
+    "Possibilité d'évolution vers le permis A2 après 2 ans"
+  ];
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-primary mb-8 text-center">
-            Permis 125 A1
-          </h1>
-          
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-              Permis A1 - Motocyclettes légères
-            </h2>
-            <p className="text-gray-600 leading-relaxed mb-6">
-              Le permis A1 vous permet de conduire des motocyclettes de 125 cm³ maximum et des tricycles à moteur. 
-              Accessible dès 16 ans, c'est la première étape vers la conduite moto en toute sécurité.
-            </p>
-            
-            <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg mb-8">
-              <h3 className="text-lg font-semibold text-blue-800 mb-3">
-                🏍️ Véhicules autorisés avec le permis A1
-              </h3>
-              <div className="grid md:grid-cols-2 gap-4 text-blue-700">
-                <div>
-                  <h4 className="font-semibold mb-2">Motocyclettes :</h4>
-                  <ul className="space-y-1 text-sm">
-                    <li>• Cylindrée max 125 cm³</li>
-                    <li>• Puissance max 11 kW (15 ch)</li>
-                    <li>• Rapport puissance/poids ≤ 0,1 kW/kg</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">Tricycles à moteur :</h4>
-                  <ul className="space-y-1 text-sm">
-                    <li>• Puissance max 15 kW</li>
-                    <li>• Accessible dès 16 ans</li>
-                    <li>• Conduite facilitée</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-secondary/5 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-secondary mb-4">
-                  Formation théorique
-                </h3>
-                <ul className="space-y-2 text-gray-600 text-sm">
-                  <li>• Code de la route moto</li>
-                  <li>• Spécificités deux-roues</li>
-                  <li>• Équipements de protection</li>
-                  <li>• Examen ETM obligatoire</li>
-                </ul>
-              </div>
-              
-              <div className="bg-primary/5 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-primary mb-4">
-                  Formation pratique
-                </h3>
-                <ul className="space-y-2 text-gray-600 text-sm">
-                  <li>• 20h de conduite minimum</li>
-                  <li>• Plateau et circulation</li>
-                  <li>• Maniabilité lente et rapide</li>
-                  <li>• Conduite en situation réelle</li>
-                </ul>
-              </div>
-              
-              <div className="bg-gray-100 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                  Examens
-                </h3>
-                <ul className="space-y-2 text-gray-600 text-sm">
-                  <li>• ETM (code moto)</li>
-                  <li>• Épreuve plateau</li>
-                  <li>• Épreuve circulation</li>
-                  <li>• Permis probatoire 3 ans</li>
-                </ul>
-              </div>
-            </div>
-            
-            <div className="bg-green-50 border border-green-200 p-6 rounded-lg mb-8">
-              <h3 className="text-lg font-semibold text-green-800 mb-3">
-                ✅ Prérequis et conditions
-              </h3>
-              <div className="grid md:grid-cols-2 gap-4 text-green-700">
-                <div>
-                  <h4 className="font-semibold mb-2">Candidat :</h4>
-                  <ul className="space-y-1 text-sm">
-                    <li>• Avoir 16 ans minimum</li>
-                    <li>• Aptitude médicale si nécessaire</li>
-                    <li>• ASSR 2 ou ASR si né après 1988</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">Formation :</h4>
-                  <ul className="space-y-1 text-sm">
-                    <li>• Dossier d'inscription complet</li>
-                    <li>• Formation théorique et pratique</li>
-                    <li>• Présentation aux examens</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-yellow-50 border border-yellow-200 p-6 rounded-lg mb-6">
-              <h3 className="text-lg font-semibold text-yellow-800 mb-3">
-                💡 Évolution vers les gros cubes
-              </h3>
-              <p className="text-yellow-700 text-sm">
-                Après 2 ans de permis A1, vous pourrez passer le permis A2 (moto jusqu'à 35 kW) sans repasser le code. 
-                Une excellente progression pour accéder aux motos plus puissantes !
-              </p>
-            </div>
-            
-            <div className="bg-gray-50 p-6 rounded-lg mb-6">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Tarifs et formules</h3>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600">Évaluation de départ</span>
-                  <span className="font-semibold">Gratuite</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600">Forfait code + plateau</span>
-                  <span className="font-semibold">450€</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600">Forfait 20h de conduite</span>
-                  <span className="font-semibold">1200€</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600">Présentation examens</span>
-                  <span className="font-semibold">Incluse</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="text-center">
-              <button className="bg-secondary text-white px-8 py-3 rounded-lg font-semibold hover:bg-secondary/90 transition-colors mr-4">
-                S'inscrire au permis A1
-              </button>
-              <button className="border border-secondary text-secondary px-8 py-3 rounded-lg font-semibold hover:bg-secondary/10 transition-colors">
-                Réserver une évaluation
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div className="min-h-screen">
+      <HeroSection
+        title="Permis A1"
+        subtitle="Formation Moto 125cc"
+        description="Obtenez votre permis A1 dès 16 ans pour conduire des motos légères jusqu'à 125cc. Formation complète avec nos moniteurs spécialisés en deux-roues."
+        icon={<FaMotorcycle />}
+        pricing={[
+          {
+            title: "Permis A1 - 125cc",
+            price: 900,
+            hours: "Formation complète 20h"
+          }
+        ]}
+        conditions={conditions}
+      />
+
+      <DescriptionSection
+        title="permis A1"
+        whatIsIt="Le permis A1 est la première catégorie de permis moto qui autorise la conduite de motocyclettes légères jusqu'à 125 cm³ et 11 kW dès 16 ans. Il nécessite l'obtention du code moto (ETM) et une formation pratique de 20h, offrant une première approche sécurisée du monde de la moto."
+        whatIsItFor="Le permis A1 sert à découvrir les plaisirs de la conduite moto en toute sécurité. Idéal pour les jeunes conducteurs, il permet d'acquérir l'expérience nécessaire avant d'évoluer vers des motos plus puissantes, tout en offrant une mobilité urbaine efficace et économique pour les trajets quotidiens."
+        whatIsItImage="/img/permis/moto.jpg"
+        whatIsItForImage="/img/permis/licence-driver.svg"
+        bgColor="bg-gray-50"
+      />
+
+      <AdvantagesSection
+        title="Pourquoi choisir notre formation A1 ?"
+        advantages={advantages}
+        bgColor="bg-white"
+      />
+
+      <PricingSection
+        title="Notre formation permis A1"
+        packages={packages}
+        includedItems={includedItems}
+        paymentOptions={paymentOptions}
+        additionalInfo={additionalInfo}
+      />
+
+      <CTASection
+        title="Prêt à passer votre permis A1 ?"
+        description="Inscrivez-vous dès aujourd'hui et découvrez le plaisir de la conduite moto en toute sécurité"
+        buttons={[
+          { text: "S'inscrire maintenant", variant: "primary" },
+          { text: "Réserver une évaluation", variant: "secondary" },
+        ]}
+      />
     </div>
   );
 }

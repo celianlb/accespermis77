@@ -1,5 +1,6 @@
 import AdvantagesSection from "@/components/Pages/AdvantagesSection";
 import CTASection from "@/components/Pages/CTASection";
+import DescriptionSection from "@/components/Pages/DescriptionSection";
 import HeroSection from "@/components/Pages/HeroSection";
 import PricingSection from "@/components/Pages/PricingSection";
 import { Metadata } from "next";
@@ -160,6 +161,15 @@ export default function FormationAM() {
           }
         ]}
         conditions={conditions}
+      />
+
+      <DescriptionSection
+        title="formation AM"
+        whatIsIt="La formation AM (anciennement BSR) est une formation obligatoire de 8 heures pour conduire un cyclomoteur de 50 cm³ ou un quadricycle léger dès 14 ans. Elle comprend une partie théorique sur la sécurité routière et une formation pratique de conduite, sans examen final mais avec délivrance d'une attestation de suivi."
+        whatIsItFor="La formation AM sert à acquérir les bases de la conduite d'un deux-roues motorisé ou d'un quadricycle en toute sécurité. Elle permet aux jeunes d'accéder à une première mobilité autonome pour les trajets scolaires ou de loisirs, tout en développant les réflexes et connaissances essentiels avant d'évoluer vers des véhicules plus puissants."
+        whatIsItImage="/img/permis/scooter.png"
+        whatIsItForImage="/img/permis/licence-driver.svg"
+        bgColor="bg-gray-50"
       />
 
       <AdvantagesSection

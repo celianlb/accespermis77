@@ -1,3 +1,4 @@
+import { CTA } from "@/components/ui/CTA";
 import { Section } from "@/components/ui/Section";
 import { CardList } from "./Card";
 
@@ -8,6 +9,7 @@ export const Formules = () => {
         Les formules
       </h3>
       <CardList />
+      <CTA href="/toutes-les-offres">Voir toutes les offres</CTA>
     </Section>
   );
 };

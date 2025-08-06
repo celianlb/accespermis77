@@ -32,7 +32,7 @@ const Header = () => {
         />
       </Link>
       <Nav />
-      <CTA>Je veux conduire</CTA>
+      <CTA href="/toutes-les-offres">Je veux conduire</CTA>
     </header>
   );
 };

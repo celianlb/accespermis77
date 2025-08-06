@@ -1,4 +1,16 @@
+import AdvantagesSection from "@/components/Pages/AdvantagesSection";
+import CTASection from "@/components/Pages/CTASection";
+import DescriptionSection from "@/components/Pages/DescriptionSection";
+import HeroSection from "@/components/Pages/HeroSection";
+import PricingSection from "@/components/Pages/PricingSection";
 import { Metadata } from "next";
+import { FaMotorcycle, FaClock, FaShieldAlt, FaUserGraduate } from "react-icons/fa";
+import {
+  MdDateRange,
+  MdDirectionsCar,
+  MdLockOpen,
+  MdStart,
+} from "react-icons/md";
 
 export const metadata: Metadata = {
   title: "Permis A2 - Formation moto intermédiaire - Accès Permis 77",
@@ -6,157 +18,192 @@ export const metadata: Metadata = {
 };
 
 export default function PermisA2() {
+  const conditions = [
+    {
+      label: "Âge minimum",
+      value: "18 ans",
+      icon: <MdDateRange />,
+    },
+    {
+      label: "Code moto requis",
+      value: "ETM obligatoire",
+      icon: <MdDirectionsCar />,
+    },
+    {
+      label: "Formation pratique",
+      value: "20h (8h + 12h)",
+      icon: <MdLockOpen />,
+    },
+    {
+      label: "Puissance autorisée",
+      value: "35 kW maximum",
+      icon: <MdStart />,
+    },
+  ];
+
+  const advantages = [
+    {
+      title: "Motos jusqu'à 35kW",
+      description:
+        "Conduisez des motocyclettes puissantes jusqu'à 47,5 ch, parfaites pour tous types de trajets",
+      icon: <FaMotorcycle />,
+    },
+    {
+      title: "Moniteurs spécialisés moto",
+      description:
+        "Équipe pédagogique expérimentée dans la formation moto et la sécurité deux-roues",
+      icon: <FaUserGraduate />,
+    },
+    {
+      title: "Formation complète",
+      description:
+        "20h de formation incluant plateau et circulation pour une maîtrise parfaite",
+      icon: <FaClock />,
+    },
+    {
+      title: "Évolution possible",
+      description:
+        "Accès au permis A (toute puissance) après 2 ans d'expérience avec le A2",
+      icon: <FaShieldAlt />,
+    },
+  ];
+
+  const packages = [
+    {
+      name: "Permis A2",
+      price: "900€",
+      duration: "Formation complète",
+      features: [
+        "Démarches administratives incluses",
+        "Prépacode en ligne pendant 6 mois",
+        "Fournitures pédagogiques (livre de code...)",
+        "20 leçons de conduite (8h plateau + 12h circulation)",
+        "Frais d'accompagnement examen plateau",
+        "Frais d'accompagnement examen circulation",
+      ],
+      highlighted: true,
+      badge: "Tarif unique",
+    },
+  ];
+
+  const includedItems = [
+    {
+      label: "Démarches administratives",
+      included: true,
+      description: "Toutes les formalités d'inscription",
+    },
+    {
+      label: "Prépacode en ligne",
+      included: true,
+      description: "Accès pendant 6 mois",
+    },
+    {
+      label: "Fournitures pédagogiques",
+      included: true,
+      description: "Livre de code et supports de cours",
+    },
+    {
+      label: "Formation plateau",
+      included: true,
+      description: "8 heures de formation hors circulation",
+    },
+    {
+      label: "Formation circulation",
+      included: true,
+      description: "12 heures de conduite en situation réelle",
+    },
+    {
+      label: "Accompagnement examen plateau",
+      included: true,
+      description: "Frais d'accompagnement inclus",
+    },
+    {
+      label: "Accompagnement examen circulation",
+      included: true,
+      description: "Frais d'accompagnement inclus",
+    },
+  ];
+
+  const paymentOptions = [
+    {
+      hours: "Permis A2",
+      schedule: [
+        {
+          step: "À l'inscription",
+          amount: "300€",
+          description: "Premier versement pour débuter la formation",
+        },
+        {
+          step: "Au passage du code",
+          amount: "300€",
+          description: "Deuxième versement après obtention de l'ETM",
+        },
+        {
+          step: "À la 10ème leçon de conduite",
+          amount: "300€",
+          description: "Solde à régler en cours de formation",
+        },
+      ]
+    }
+  ];
+
+  const additionalInfo = [
+    "Code moto (ETM) obligatoire avant de commencer la formation pratique",
+    "Formation sur motos écoles récentes et adaptées à tous niveaux",
+    "Taux de réussite élevé grâce à notre méthode pédagogique éprouvée",
+    "Équipements de protection fournis pendant la formation",
+    "Possibilité d'évolution vers le permis A (toute puissance) après 2 ans",
+    "Large choix de motos disponibles sur le marché avec ce permis"
+  ];
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-W-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-primary mb-8 text-center">
-            Permis A2
-          </h1>
-          
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-              Permis A2 - Motocyclettes de puissance intermédiaire
-            </h2>
-            <p className="text-gray-600 leading-relaxed mb-6">
-              Le permis A2 vous permet de conduire des motocyclettes d'une puissance maximale de 35 kW (47,5 ch). 
-              Accessible dès 18 ans, c'est le permis moto le plus populaire, offrant un excellent compromis puissance/sécurité.
-            </p>
-            
-            <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg mb-8">
-              <h3 className="text-lg font-semibold text-blue-800 mb-3">
-                🏍️ Véhicules autorisés avec le permis A2
-              </h3>
-              <div className="grid md:grid-cols-2 gap-4 text-blue-700">
-                <div>
-                  <h4 className="font-semibold mb-2">Motocyclettes :</h4>
-                  <ul className="space-y-1 text-sm">
-                    <li>• Puissance max 35 kW (47,5 ch)</li>
-                    <li>• Rapport puissance/poids ≤ 0,2 kW/kg</li>
-                    <li>• Toutes cylindrées autorisées</li>
-                    <li>• Motos bridées acceptées</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">Tricycles à moteur :</h4>
-                  <ul className="space-y-1 text-sm">
-                    <li>• Toute puissance autorisée</li>
-                    <li>• Poids à vide > 15 tonnes</li>
-                    <li>• Conduite facilitée</li>
-                    <li>• Parfait pour débuter</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-secondary/5 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-secondary mb-4">
-                  Code moto (ETM)
-                </h3>
-                <ul className="space-y-2 text-gray-600 text-sm">
-                  <li>• 40 questions spécifiques moto</li>
-                  <li>• Réglementation deux-roues</li>
-                  <li>• Équipements et sécurité</li>
-                  <li>• Valable 5 ans</li>
-                </ul>
-              </div>
-              
-              <div className="bg-primary/5 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-primary mb-4">
-                  Épreuve plateau
-                </h3>
-                <ul className="space-y-2 text-gray-600 text-sm">
-                  <li>• Vérifications techniques</li>
-                  <li>• Maniabilité sans moteur</li>
-                  <li>• Maniabilité avec moteur</li>
-                  <li>• Freinage d'urgence</li>
-                </ul>
-              </div>
-              
-              <div className="bg-gray-100 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                  Épreuve circulation
-                </h3>
-                <ul className="space-y-2 text-gray-600 text-sm">
-                  <li>• 35 minutes de conduite</li>
-                  <li>• Situations variées</li>
-                  <li>• Autonomie et initiative</li>
-                  <li>• Respect du code</li>
-                </ul>
-              </div>
-            </div>
-            
-            <div className="bg-green-50 border border-green-200 p-6 rounded-lg mb-8">
-              <h3 className="text-lg font-semibold text-green-800 mb-3">
-                🎯 Avantages du permis A2
-              </h3>
-              <ul className="space-y-2 text-green-700">
-                <li>• Accès à une large gamme de motos performantes</li>
-                <li>• Puissance suffisante pour tous types de trajets</li>
-                <li>• Évolution possible vers le permis A après 2 ans</li>
-                <li>• Excellent compromis pour débuter en moto</li>
-                <li>• Nombreux modèles disponibles sur le marché</li>
-              </ul>
-            </div>
-            
-            <div className="bg-purple-50 border border-purple-200 p-6 rounded-lg mb-8">
-              <h3 className="text-lg font-semibold text-purple-800 mb-3">
-                🚀 Accès direct ou progressif
-              </h3>
-              <div className="grid md:grid-cols-2 gap-4 text-purple-700">
-                <div>
-                  <h4 className="font-semibold mb-2">Accès direct (18 ans) :</h4>
-                  <ul className="space-y-1 text-sm">
-                    <li>• Formation complète obligatoire</li>
-                    <li>• Code moto + plateau + circulation</li>
-                    <li>• 20h de conduite minimum</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">Depuis A1 (18 ans + 2 ans A1) :</h4>
-                  <ul className="space-y-1 text-sm">
-                    <li>• Pas de nouveau code à passer</li>
-                    <li>• Formation adaptée</li>
-                    <li>• Progression naturelle</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-gray-50 p-6 rounded-lg mb-6">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Nos formules permis A2</h3>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600">Forfait découverte (15h)</span>
-                  <span className="font-semibold">1450€</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600">Forfait standard (20h)</span>
-                  <span className="font-semibold">1650€</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600">Forfait sécurité (25h)</span>
-                  <span className="font-semibold">1850€</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600">Code moto inclus</span>
-                  <span className="font-semibold text-green-600">✓</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="text-center">
-              <button className="bg-secondary text-white px-8 py-3 rounded-lg font-semibold hover:bg-secondary/90 transition-colors mr-4">
-                S'inscrire au permis A2
-              </button>
-              <button className="border border-secondary text-secondary px-8 py-3 rounded-lg font-semibold hover:bg-secondary/10 transition-colors">
-                Essai moto gratuit
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div className="min-h-screen">
+      <HeroSection
+        title="Permis A2"
+        subtitle="Formation Moto Intermédiaire"
+        description="Obtenez votre permis A2 dès 18 ans pour conduire des motos jusqu'à 35 kW. Formation complète avec nos moniteurs spécialisés en deux-roues."
+        icon={<FaMotorcycle />}
+        pricing={[
+          {
+            title: "Permis A2",
+            price: 900,
+            hours: "Formation complète 20h"
+          }
+        ]}
+        conditions={conditions}
+      />
+
+      <DescriptionSection
+        title="permis A2"
+        whatIsIt="Le permis A2 est une catégorie de permis moto qui autorise la conduite de motocyclettes d'une puissance maximale de 35 kW (47,5 ch) dès 18 ans. Il constitue une étape intermédiaire vers le permis A, permettant de conduire des motos plus puissantes tout en conservant des limitations de sécurité pour les conducteurs expérimentés."
+        whatIsItFor="Le permis A2 sert à accéder à une gamme étendue de motocyclettes performantes pour tous types d'usage : trajets urbains, voyages, loisirs. Il offre le parfait équilibre entre puissance et sécurité, permettant de développer son expérience motard avant d'évoluer vers le permis A pour les motos sans limitation de puissance."
+        whatIsItImage="/img/permis/moto.jpg"
+        whatIsItForImage="/img/permis/licence-driver.svg"
+        bgColor="bg-gray-50"
+      />
+
+      <AdvantagesSection
+        title="Pourquoi choisir notre formation A2 ?"
+        advantages={advantages}
+        bgColor="bg-white"
+      />
+
+      <PricingSection
+        title="Notre formation permis A2"
+        packages={packages}
+        includedItems={includedItems}
+        paymentOptions={paymentOptions}
+        additionalInfo={additionalInfo}
+      />
+
+      <CTASection
+        title="Prêt à passer votre permis A2 ?"
+        description="Inscrivez-vous dès aujourd'hui et accédez à une large gamme de motos performantes"
+        buttons={[
+          { text: "S'inscrire maintenant", variant: "primary" },
+          { text: "Réserver une évaluation", variant: "secondary" },
+        ]}
+      />
     </div>
   );
 }

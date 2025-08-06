@@ -1,0 +1,67 @@
+<svg width="400" height="320" viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="320" fill="#f1f5f9" rx="20"/>
+  
+  <!-- Timeline -->
+  <path d="M50 160 L350 160" stroke="#3b82f6" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Timeline points -->
+  <circle cx="100" cy="160" r="8" fill="#10b981"/>
+  <circle cx="200" cy="160" r="8" fill="#fbbf24"/>
+  <circle cx="300" cy="160" r="8" fill="#ef4444"/>
+  
+  <!-- Start point -->
+  <g transform="translate(60, 120)">
+    <rect x="0" y="0" width="80" height="30" fill="#10b981" rx="15"/>
+    <text x="40" y="20" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">DÉBUT</text>
+  </g>
+  
+  <!-- Progress point -->
+  <g transform="translate(160, 120)">
+    <rect x="0" y="0" width="80" height="30" fill="#fbbf24" rx="15"/>
+    <text x="40" y="20" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">FORMATION</text>
+  </g>
+  
+  <!-- End point -->
+  <g transform="translate(260, 120)">
+    <rect x="0" y="0" width="80" height="30" fill="#ef4444" rx="15"/>
+    <text x="40" y="20" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">PERMIS</text>
+  </g>
+  
+  <!-- Calendar showing 60 days -->
+  <g transform="translate(150, 50)">
+    <rect x="0" y="0" width="100" height="70" fill="white" stroke="#e5e7eb" stroke-width="2" rx="4"/>
+    <rect x="0" y="0" width="100" height="20" fill="#3b82f6" rx="4 4 0 0"/>
+    <text x="50" y="15" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">60 JOURS</text>
+    <!-- Calendar grid -->
+    <rect x="10" y="30" width="12" height="10" fill="#10b981"/>
+    <rect x="25" y="30" width="12" height="10" fill="#10b981"/>
+    <rect x="40" y="30" width="12" height="10" fill="#10b981"/>
+    <rect x="55" y="30" width="12" height="10" fill="#fbbf24"/>
+    <rect x="70" y="30" width="12" height="10" fill="#fbbf24"/>
+    <rect x="10" y="45" width="12" height="10" fill="#fbbf24"/>
+    <rect x="25" y="45" width="12" height="10" fill="#ef4444"/>
+    <rect x="40" y="45" width="12" height="10" fill="#ef4444"/>
+  </g>
+  
+  <!-- Success trophy -->
+  <g transform="translate(80, 200)">
+    <path d="M20 30 L20 50 L30 50 L30 30 Z" fill="#fbbf24"/>
+    <circle cx="25" cy="25" r="15" fill="#f59e0b"/>
+    <circle cx="25" cy="25" r="10" fill="#fbbf24"/>
+    <text x="25" y="28" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">1</text>
+  </g>
+  
+  <!-- Fast forward arrows -->
+  <g transform="translate(280, 200)">
+    <path d="M0 15 L15 5 L15 10 L30 10 L45 0 L45 5 L60 5 L60 15 L60 25 L45 25 L45 20 L30 20 L15 30 L15 25 L0 25 Z" fill="#3b82f6" opacity="0.7"/>
+  </g>
+  
+  <!-- Time savings -->
+  <g transform="translate(300, 260)">
+    <circle cx="25" cy="25" r="20" fill="#10b981" opacity="0.2"/>
+    <path d="M25 25 L25 10" stroke="#10b981" stroke-width="3" stroke-linecap="round"/>
+    <path d="M25 25 L35 25" stroke="#10b981" stroke-width="2" stroke-linecap="round"/>
+    <text x="50" y="30" fill="#10b981" font-family="Arial, sans-serif" font-size="10" font-weight="bold">RAPIDE</text>
+  </g>
+</svg>

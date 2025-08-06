@@ -23,8 +23,12 @@ export const HeroSection = () => {
           className="hidden xl:block"
         />
         <div className="flex flex-col md:flex-row gap-16 items-center">
-          <Card title="Formule Permis B" price={1280} />
-          <Card title="Forfait Code" price={15} />
+          <Card
+            title="Formule Permis B"
+            price={1280}
+            link="/permis-auto/permis-b"
+          />
+          <Card title="Forfait Code" price={15} link="/code-de-la-route" />
         </div>
       </div>
     </Section>

@@ -1,4 +1,16 @@
+import AdvantagesSection from "@/components/Pages/AdvantagesSection";
+import CTASection from "@/components/Pages/CTASection";
+import DescriptionSection from "@/components/Pages/DescriptionSection";
+import HeroSection from "@/components/Pages/HeroSection";
+import PricingSection from "@/components/Pages/PricingSection";
 import { Metadata } from "next";
+import { FaCar, FaClock, FaShieldAlt, FaUserGraduate } from "react-icons/fa";
+import {
+  MdDateRange,
+  MdDirectionsCar,
+  MdLockOpen,
+  MdStart,
+} from "react-icons/md";
 
 export const metadata: Metadata = {
   title: "Passerelle BEA vers B - Formation complémentaire - Accès Permis 77",
@@ -6,98 +18,172 @@ export const metadata: Metadata = {
 };
 
 export default function PasserelleBEAversB() {
+  const conditions = [
+    {
+      label: "Prérequis",
+      value: "Permis BEA depuis +3 mois",
+      icon: <MdDateRange />,
+    },
+    {
+      label: "Formation obligatoire",
+      value: "7 heures",
+      icon: <MdDirectionsCar />,
+    },
+    {
+      label: "Nouvel examen",
+      value: "Aucun",
+      icon: <MdLockOpen />,
+    },
+    {
+      label: "Accès",
+      value: "Conduite manuelle",
+      icon: <MdStart />,
+    },
+  ];
+
+  const advantages = [
+    {
+      title: "Formation courte et efficace",
+      description:
+        "Seulement 7 heures de formation pour maîtriser la conduite manuelle et l'embrayage",
+      icon: <FaClock />,
+    },
+    {
+      title: "Moniteurs spécialisés",
+      description:
+        "Formateurs expérimentés dans l'apprentissage de la conduite manuelle pour titulaires BEA",
+      icon: <FaUserGraduate />,
+    },
+    {
+      title: "Véhicules adaptés",
+      description:
+        "Véhicules école manuels récents avec double commande pour un apprentissage sécurisé",
+      icon: <FaCar />,
+    },
+    {
+      title: "Pas d'examen",
+      description:
+        "Validation par formation pratique uniquement, aucun nouvel examen à passer",
+      icon: <FaShieldAlt />,
+    },
+  ];
+
+  const packages = [
+    {
+      name: "Passerelle BEA vers B",
+      price: "350€",
+      duration: "7 heures de formation",
+      features: [
+        "7 heures de formation obligatoires",
+        "Apprentissage de l'embrayage",
+        "Technique de passage des vitesses",
+        "Conduite en circulation",
+        "Manœuvres spécifiques",
+        "Attestation de formation délivrée",
+      ],
+      highlighted: true,
+      badge: "Formation complète",
+    },
+  ];
+
+  const includedItems = [
+    {
+      label: "Formation pratique complète",
+      included: true,
+      description: "7 heures de formation manuelle",
+    },
+    {
+      label: "Apprentissage embrayage",
+      included: true,
+      description: "Maîtrise du point de patinage",
+    },
+    {
+      label: "Passage des vitesses",
+      included: true,
+      description: "Technique et synchronisation",
+    },
+    {
+      label: "Conduite en circulation",
+      included: true,
+      description: "Application en situation réelle",
+    },
+    {
+      label: "Attestation de formation",
+      included: true,
+      description: "Document officiel délivré",
+    },
+  ];
+
+  const paymentOptions = [
+    {
+      hours: "Passerelle BEA vers B",
+      schedule: [
+        {
+          step: "À l'inscription",
+          amount: "350€",
+          description: "Paiement unique pour la formation complète",
+        },
+      ]
+    }
+  ];
+
+  const additionalInfo = [
+    "Prérequis : être titulaire du permis BEA depuis au moins 3 mois",
+    "Avoir conduit au moins 1000 km avec le permis BEA",
+    "Aucune infraction entraînant une perte de points",
+    "Formation possible en 1 journée ou répartie selon vos disponibilités",
+    "Aucun examen à passer, validation par formation pratique uniquement",
+    "Attestation permettant la conduite de véhicules manuels délivrée en fin de formation"
+  ];
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-primary mb-8 text-center">
-            Passerelle BEA vers B
-          </h1>
-          
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-              Formation complémentaire pour conduire en manuel
-            </h2>
-            <p className="text-gray-600 leading-relaxed mb-6">
-              Vous avez obtenu votre permis BEA (automatique) et souhaitez maintenant pouvoir conduire des véhicules à boîte manuelle ? 
-              La formation passerelle vous permet d'obtenir cette autorisation après seulement 7 heures de formation.
-            </p>
-            
-            <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg mb-8">
-              <h3 className="text-lg font-semibold text-blue-800 mb-3">
-                📋 Conditions requises
-              </h3>
-              <ul className="space-y-2 text-blue-700">
-                <li>• Être titulaire du permis BEA depuis au moins 3 mois</li>
-                <li>• Aucune infraction entraînant une perte de points</li>
-                <li>• Avoir conduit au moins 1000 km avec le permis BEA</li>
-              </ul>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-secondary/5 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-secondary mb-4">
-                  Programme de formation
-                </h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• 7 heures de formation obligatoires</li>
-                  <li>• Apprentissage de l'embrayage</li>
-                  <li>• Technique de passage des vitesses</li>
-                  <li>• Conduite en circulation</li>
-                </ul>
-              </div>
-              
-              <div className="bg-primary/5 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-primary mb-4">
-                  Avantages
-                </h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Pas d'examen à repasser</li>
-                  <li>• Formation courte et efficace</li>
-                  <li>• Accès à tous types de véhicules</li>
-                  <li>• Attestation de formation délivrée</li>
-                </ul>
-              </div>
-            </div>
-            
-            <div className="bg-gray-50 p-6 rounded-lg mb-6">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Déroulement de la formation</h3>
-              <div className="space-y-4">
-                <div className="flex items-start gap-4">
-                  <div className="bg-secondary text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">1</div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800">Évaluation (1h)</h4>
-                    <p className="text-gray-600 text-sm">Évaluation de vos acquis et adaptation au véhicule manuel</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="bg-secondary text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">2</div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800">Formation pratique (6h)</h4>
-                    <p className="text-gray-600 text-sm">Apprentissage progressif de la conduite manuelle en circulation</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="bg-secondary text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">3</div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800">Attestation</h4>
-                    <p className="text-gray-600 text-sm">Délivrance de l'attestation vous autorisant à conduire en manuel</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="text-center">
-              <button className="bg-secondary text-white px-8 py-3 rounded-lg font-semibold hover:bg-secondary/90 transition-colors mr-4">
-                S'inscrire à la passerelle
-              </button>
-              <button className="border border-secondary text-secondary px-8 py-3 rounded-lg font-semibold hover:bg-secondary/10 transition-colors">
-                Demander un devis
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div className="min-h-screen">
+      <HeroSection
+        title="Passerelle BEA vers B"
+        subtitle="Formation Complémentaire Manuelle"
+        description="Complétez votre permis BEA en apprenant la conduite manuelle. Une formation courte de 7 heures pour maîtriser l'embrayage et accéder à tous les véhicules."
+        icon={<FaCar />}
+        pricing={[
+          {
+            title: "Passerelle BEA vers B",
+            price: 350,
+            hours: "7h de formation"
+          }
+        ]}
+        conditions={conditions}
+      />
+
+      <DescriptionSection
+        title="passerelle BEA vers B"
+        whatIsIt="La passerelle BEA vers B est une formation complémentaire de 7 heures qui permet aux titulaires du permis BEA (automatique) d'apprendre la conduite manuelle. Cette formation se concentre sur la maîtrise de l'embrayage, le passage des vitesses et les spécificités de la conduite avec boîte manuelle, sans nécessiter de nouvel examen."
+        whatIsItFor="Cette passerelle sert à élargir vos possibilités de conduite en vous donnant accès à tous les véhicules, qu'ils soient automatiques ou manuels. Particulièrement utile pour l'emploi, la location de véhicules ou l'achat d'une voiture manuelle, elle vous offre une flexibilité totale dans vos choix de mobilité."
+        whatIsItImage="/img/permis/voiture.png"
+        whatIsItForImage="/img/permis/licence-driver.svg"
+        bgColor="bg-gray-50"
+      />
+
+      <AdvantagesSection
+        title="Pourquoi choisir notre passerelle BEA vers B ?"
+        advantages={advantages}
+        bgColor="bg-white"
+      />
+
+      <PricingSection
+        title="Notre formation passerelle"
+        packages={packages}
+        includedItems={includedItems}
+        paymentOptions={paymentOptions}
+        additionalInfo={additionalInfo}
+      />
+
+      <CTASection
+        title="Prêt à apprendre la conduite manuelle ?"
+        description="Inscrivez-vous dès aujourd'hui et complétez votre formation avec nos moniteurs spécialisés"
+        buttons={[
+          { text: "S'inscrire maintenant", variant: "primary" },
+          { text: "Vérifier mon éligibilité", variant: "secondary" },
+        ]}
+      />
     </div>
   );
 }

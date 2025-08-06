@@ -1,0 +1,30 @@
+<svg width="400" height="320" viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="320" fill="#ffffff" rx="16"/>
+  
+  <!-- Subtle road -->
+  <path d="M0 240 Q200 220 400 240 L400 320 L0 320 Z" fill="#f1f5f9"/>
+  <path d="M0 240 Q200 220 400 240" stroke="#e2e8f0" stroke-width="2" fill="none"/>
+  
+  <!-- Minimalist car -->
+  <g transform="translate(180, 140)">
+    <!-- Car body -->
+    <rect x="0" y="15" width="70" height="30" fill="#3b82f6" rx="15"/>
+    <!-- Car windows -->
+    <rect x="12" y="8" width="46" height="18" fill="#60a5fa" rx="9"/>
+    <!-- Subtle wheels -->
+    <circle cx="15" cy="50" r="6" fill="#64748b"/>
+    <circle cx="55" cy="50" r="6" fill="#64748b"/>
+  </g>
+  
+  <!-- Clean license card -->
+  <g transform="translate(120, 60)">
+    <rect x="0" y="0" width="70" height="45" fill="#10b981" rx="8"/>
+    <text x="35" y="28" text-anchor="middle" fill="white" font-family="system-ui, sans-serif" font-size="18" font-weight="600">B</text>
+  </g>
+  
+  <!-- Minimal decorative dots -->
+  <circle cx="90" cy="100" r="4" fill="#10b981" opacity="0.2"/>
+  <circle cx="310" cy="80" r="6" fill="#3b82f6" opacity="0.15"/>
+  <circle cx="320" cy="110" r="3" fill="#fbbf24" opacity="0.3"/>
+</svg>

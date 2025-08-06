@@ -1,5 +1,6 @@
 import AdvantagesSection from "@/components/Pages/AdvantagesSection";
 import CTASection from "@/components/Pages/CTASection";
+import DescriptionSection from "@/components/Pages/DescriptionSection";
 import HeroSection from "@/components/Pages/HeroSection";
 import PricingSection from "@/components/Pages/PricingSection";
 import { Metadata } from "next";
@@ -165,6 +166,15 @@ export default function ConduiteAccompagneeManuelle() {
           }
         ]}
         conditions={conditions}
+      />
+
+      <DescriptionSection
+        title="conduite accompagnée manuelle"
+        whatIsIt="La conduite accompagnée manuelle (AAC) est une formation qui permet d'apprendre à conduire dès 15 ans avec un accompagnateur. Cette formule combine l'enseignement professionnel en auto-école avec une phase de conduite accompagnée de minimum 3000 km, offrant une expérience de conduite riche et variée avant l'examen."
+        whatIsItFor="La conduite accompagnée sert à acquérir une expérience de conduite solide et diversifiée. Elle permet de réduire significativement le risque d'accidents après l'obtention du permis, d'accéder à des tarifs d'assurance préférentiels et de développer une conduite plus mature et responsable grâce à l'encadrement d'un accompagnateur expérimenté."
+        whatIsItImage="/img/permis/voiture.png"
+        whatIsItForImage="/img/permis/licence-driver.svg"
+        bgColor="bg-gray-50"
       />
 
       <AdvantagesSection

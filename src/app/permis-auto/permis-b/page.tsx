@@ -1,5 +1,6 @@
 import AdvantagesSection from "@/components/Pages/AdvantagesSection";
 import CTASection from "@/components/Pages/CTASection";
+import DescriptionSection from "@/components/Pages/DescriptionSection";
 import HeroSection from "@/components/Pages/HeroSection";
 import PricingSection from "@/components/Pages/PricingSection";
 import { Metadata } from "next";
@@ -202,6 +203,15 @@ export default function PermisB() {
           }
         ]}
         conditions={conditions}
+      />
+
+      <DescriptionSection
+        title="permis B"
+        whatIsIt="Le permis B est la catégorie de permis de conduire qui autorise la conduite des véhicules légers. Il permet de conduire des voitures particulières, des camionnettes et des camping-cars d'un poids total autorisé en charge (PTAC) ne dépassant pas 3,5 tonnes, avec ou sans remorque légère."
+        whatIsItFor="Le permis B sert avant tout à garantir votre autonomie et votre mobilité au quotidien. Il vous permet de vous déplacer librement pour vos activités professionnelles, personnelles et familiales. C'est un véritable atout pour l'emploi, facilitant l'accès à un plus large éventail d'opportunités professionnelles et vous offrant une indépendance dans vos déplacements."
+        whatIsItImage="/img/permis/voiture.png"
+        whatIsItForImage="/img/permis/licence-driver.svg"
+        bgColor="bg-gray-50"
       />
 
       <AdvantagesSection

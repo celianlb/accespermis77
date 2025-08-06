@@ -1,5 +1,6 @@
 import AdvantagesSection from "@/components/Pages/AdvantagesSection";
 import CTASection from "@/components/Pages/CTASection";
+import DescriptionSection from "@/components/Pages/DescriptionSection";
 import HeroSection from "@/components/Pages/HeroSection";
 import PricingSection from "@/components/Pages/PricingSection";
 import { Metadata } from "next";
@@ -199,6 +200,14 @@ export default function PermisBEA() {
         conditions={conditions}
       />
 
+      <DescriptionSection
+        title="permis BEA"
+        whatIsIt="Le permis BEA (Boîte de vitesses Automatique) est une catégorie de permis de conduire qui vous autorise à conduire uniquement des véhicules équipés d'une transmission automatique. Il offre une approche simplifiée de l'apprentissage de la conduite, sans gestion d'embrayage ni passage de vitesses, idéal pour se concentrer sur les règles de circulation et la sécurité routière."
+        whatIsItFor="Le permis BEA sert à faciliter votre apprentissage de la conduite en supprimant les contraintes techniques de la boîte manuelle. Parfait pour ceux qui souhaitent une formation plus accessible, moins de stress pendant l'examen, ou qui ont des difficultés avec l'embrayage. Il vous donne accès à une large gamme de véhicules automatiques modernes."
+        whatIsItImage="/img/permis/voiture.png"
+        whatIsItForImage="/img/permis/licence-driver.svg"
+        bgColor="bg-gray-50"
+      />
 
       <AdvantagesSection
         title="Pourquoi choisir le permis BEA chez nous ?"

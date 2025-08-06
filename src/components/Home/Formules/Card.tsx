@@ -7,6 +7,7 @@ interface PropsFormules {
   price: string;
   pack: string[];
   variant: "white" | "orange";
+  href?: string;
 }
 
 const list: PropsFormules[] = [
@@ -21,6 +22,7 @@ const list: PropsFormules[] = [
       "20 leçons de conduites",
     ],
     variant: "orange",
+    href: "/permis-auto/permis-b",
   },
   {
     title: "PERMIS A2",
@@ -33,6 +35,7 @@ const list: PropsFormules[] = [
       "20 leçons de conduites (8h de plateau & 12h en circulation)",
     ],
     variant: "white",
+    href: "/permis-moto/permis-a2",
   },
   {
     title: "FORFAIT CODE",
@@ -44,6 +47,7 @@ const list: PropsFormules[] = [
       "Jusqu'à 1 passage d'examen du code de la route",
     ],
     variant: "white",
+    href: "/code-de-la-route",
   },
 ];
 
@@ -105,8 +109,8 @@ export const Card = ({
         </div>
       </div>
       <CTA
-        classname="w-fit mx-auto"
         variant={isOrange ? "secondary" : "primary"}
+        href={list.find((item) => item.title === title)?.href}
       >
         Je découvre
       </CTA>
