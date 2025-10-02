@@ -328,6 +328,14 @@ const Nav = () => {
         >
           Permis Accélérés
         </NavElement>
+        <NavElement
+          href="/engagement-qualite"
+          isActive={path === "/engagement-qualite"}
+          onClick={closeMenu}
+          isMobile={isOpen}
+        >
+          Engagement & Qualité
+        </NavElement>
       </ul>
     </nav>
   );

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Picto } from "../ui/Picto";
 import { Section } from "../ui/Section";
 
@@ -52,20 +53,29 @@ export const Certification = () => {
           ))}
         </div>
         <div className="flex flex-wrap gap-8 justify-center items-center">
-          <Image
-            src={"/img/logo-certification-qualiopi.webp"}
-            alt="Certification Qualiopi"
-            width={215}
-            height={115}
-            className="opacity-50 w-auto h-[90px] md:h-[115px]"
-          />
-          <Image
-            src={"/img/ecole-conduite-qualite-certification.png"}
-            alt="Certification Ecole Conduite Qualité"
-            width={120.42}
-            height={115}
-            className="opacity-50 w-auto h-[90px] md:h-[115px]"
-          />
+          <Link href={"/engagement-qualite"}>
+            <Image
+              src={"/img/logo-certification-qualiopi.webp"}
+              alt="Certification Qualiopi"
+              width={215}
+              height={115}
+              className="opacity-50 w-auto h-[90px] md:h-[115px] hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+            />
+          </Link>
+
+          <Link
+            href={"/pdf/certif-qualite.pdf"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src={"/img/ecole-conduite-qualite-certification.png"}
+              alt="Certification Ecole Conduite Qualité"
+              width={120.42}
+              height={115}
+              className="opacity-50 w-auto h-[90px] md:h-[115px] hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+            />
+          </Link>
         </div>
       </div>
     </Section>
