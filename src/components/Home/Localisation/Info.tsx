@@ -13,7 +13,7 @@ const info = [
   },
   {
     title: "Réseaux sociaux",
-    description: "contact@le-pont-de-courtry.fr",
+    description: "accespermis77@gmail.com",
     url: "/img/svg/localisation/social.svg",
   },
 ];

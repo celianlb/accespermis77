@@ -14,14 +14,15 @@ import {
 
 export const metadata: Metadata = {
   title: "Passerelle BEA vers B - Formation complémentaire - Accès Permis 77",
-  description: "Complétez votre permis BEA avec la passerelle vers le permis B. Apprenez la conduite manuelle avec Accès Permis 77.",
+  description:
+    "Complétez votre permis BEA avec la passerelle vers le permis B. Apprenez la conduite manuelle avec Accès Permis 77.",
 };
 
 export default function PasserelleBEAversB() {
   const conditions = [
     {
       label: "Prérequis",
-      value: "Permis BEA depuis +3 mois",
+      value: "Permis BEA",
       icon: <MdDateRange />,
     },
     {
@@ -71,9 +72,10 @@ export default function PasserelleBEAversB() {
   const packages = [
     {
       name: "Passerelle BEA vers B",
-      price: "350€",
+      price: "399€",
       duration: "7 heures de formation",
       features: [
+        "Fabrication permis B inclus",
         "7 heures de formation obligatoires",
         "Apprentissage de l'embrayage",
         "Technique de passage des vitesses",
@@ -87,6 +89,10 @@ export default function PasserelleBEAversB() {
   ];
 
   const includedItems = [
+    {
+      label: "Fabrication du permis",
+      included: true,
+    },
     {
       label: "Formation pratique complète",
       included: true,
@@ -120,20 +126,18 @@ export default function PasserelleBEAversB() {
       schedule: [
         {
           step: "À l'inscription",
-          amount: "350€",
+          amount: "399€",
           description: "Paiement unique pour la formation complète",
         },
-      ]
-    }
+      ],
+    },
   ];
 
   const additionalInfo = [
-    "Prérequis : être titulaire du permis BEA depuis au moins 3 mois",
-    "Avoir conduit au moins 1000 km avec le permis BEA",
+    "Prérequis : être titulaire du permis BEA",
     "Aucune infraction entraînant une perte de points",
     "Formation possible en 1 journée ou répartie selon vos disponibilités",
     "Aucun examen à passer, validation par formation pratique uniquement",
-    "Attestation permettant la conduite de véhicules manuels délivrée en fin de formation"
   ];
 
   return (
@@ -146,9 +150,9 @@ export default function PasserelleBEAversB() {
         pricing={[
           {
             title: "Passerelle BEA vers B",
-            price: 350,
-            hours: "7h de formation"
-          }
+            price: 399,
+            hours: "7h de formation",
+          },
         ]}
         conditions={conditions}
       />

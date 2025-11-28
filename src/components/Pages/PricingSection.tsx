@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 interface PricingItem {
   label: string;
@@ -94,15 +95,16 @@ export default function PricingSection({
                     ))}
                   </ul>
 
-                  <button
-                    className={`w-full py-3 rounded-lg font-semibold transition-colors ${
+                  <Link
+                    href={`/contact?formule=${encodeURIComponent(pkg.name)}&prix=${encodeURIComponent(pkg.price)}`}
+                    className={`w-full py-3 rounded-lg font-semibold transition-colors flex items-center justify-center ${
                       pkg.highlighted
                         ? "bg-secondary text-white hover:bg-secondary/90"
                         : "border border-secondary text-secondary hover:bg-secondary/10"
                     }`}
                   >
                     Choisir cette formule
-                  </button>
+                  </Link>
                 </div>
               ))}
             </div>

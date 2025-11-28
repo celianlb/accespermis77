@@ -14,7 +14,8 @@ import {
 
 export const metadata: Metadata = {
   title: "Permis B Accéléré - Formation intensive - Accès Permis 77",
-  description: "Obtenez votre permis B rapidement avec notre formation accélérée. Stage intensif permis B en Seine-et-Marne avec Accès Permis 77.",
+  description:
+    "Obtenez votre permis B rapidement avec notre formation accélérée. Stage intensif permis B en Seine-et-Marne avec Accès Permis 77.",
 };
 
 export default function PermisBAccelere() {
@@ -71,14 +72,14 @@ export default function PermisBAccelere() {
   const packages = [
     {
       name: "Forfait Accéléré 20h",
-      price: "1846€",
+      price: "2150€",
       duration: "Code + 20 leçons",
       features: [
         "Démarches administratives incluses",
         "Code en salle illimité 6 mois",
         "Fournitures pédagogiques complètes",
         "20 leçons de conduite manuelle",
-        "Présentation aux examens",
+        "Passage aux examens pratiques",
         "Garantie 60 jours maximum",
       ],
       highlighted: true,
@@ -86,14 +87,14 @@ export default function PermisBAccelere() {
     },
     {
       name: "Forfait Accéléré 30h",
-      price: "2376€",
+      price: "3000€",
       duration: "Code + 30 leçons",
       features: [
         "Démarches administratives incluses",
         "Code en salle illimité 6 mois",
         "Fournitures pédagogiques complètes",
         "30 leçons de conduite manuelle",
-        "Présentation aux examens",
+        "Passage aux examens pratiques",
         "Suivi renforcé personnalisé",
         "Garantie 60 jours maximum",
       ],
@@ -122,7 +123,7 @@ export default function PermisBAccelere() {
       description: "20 ou 30 selon le forfait choisi",
     },
     {
-      label: "Présentation aux examens",
+      label: "Passage aux examens pratiques",
       included: true,
       description: "Code et conduite inclus",
     },
@@ -143,40 +144,40 @@ export default function PermisBAccelere() {
       schedule: [
         {
           step: "À l'inscription",
-          amount: "900€",
+          amount: "1075€",
           description: "Premier versement pour débuter la formation",
         },
         {
           step: "À la 10ème leçon",
-          amount: "946€",
+          amount: "1075€",
           description: "Solde à régler en cours de formation",
         },
-      ]
+      ],
     },
     {
       hours: "Forfait Accéléré 30h",
       schedule: [
         {
           step: "À l'inscription",
-          amount: "1188€",
+          amount: "1500€",
           description: "Premier versement pour débuter la formation",
         },
         {
           step: "À la 15ème leçon",
-          amount: "1188€",
+          amount: "1500€",
           description: "Solde à régler en cours de formation",
         },
-      ]
-    }
+      ],
+    },
   ];
 
   const additionalInfo = [
     "Garantie 60 jours maximum (examen compris) sinon remboursement de la différence",
     "Formation intensive avec créneaux prioritaires et planning dédié",
     "Évaluation de départ gratuite pour évaluer précisément vos besoins",
-    "Leçons supplémentaires disponibles à l'unité (45€) ou par forfait de 5 leçons",
+    "Leçons supplémentaires disponibles à l'unité (90€) ou par forfait de 5 leçons",
     "Taux de réussite exceptionnel de 88% au premier passage en formation accélérée",
-    "Moniteurs spécialisés en formation intensive pour une progression optimale"
+    "Moniteurs spécialisés en formation intensive pour une progression optimale",
   ];
 
   return (
@@ -184,19 +185,19 @@ export default function PermisBAccelere() {
       <HeroSection
         title="Permis B Accéléré"
         subtitle="Formation Intensive"
-        description="Obtenez votre permis B en 60 jours maximum avec notre formation accélérée. Une approche intensive et personnalisée pour une réussite rapide garantie."
+        description="Formation possible 7/7, jours féries également. Obtenez votre permis B en 60 jours maximum avec notre formation accélérée. Une approche intensive et personnalisée pour une réussite rapide garantie."
         icon={<FaCar />}
         pricing={[
           {
             title: "Forfait Accéléré 20h",
-            price: 1846,
-            hours: "Code + 20 leçons"
+            price: 2150,
+            hours: "Code + 20 leçons",
           },
           {
-            title: "Forfait Accéléré 30h", 
-            price: 2376,
-            hours: "Code + 30 leçons"
-          }
+            title: "Forfait Accéléré 30h",
+            price: 3000,
+            hours: "Code + 30 leçons",
+          },
         ]}
         conditions={conditions}
       />

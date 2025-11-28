@@ -14,8 +14,9 @@ const list: PropsFormules[] = [
   {
     title: "PERMIS B",
     description: "Boîte manuelle",
-    price: "1280€",
+    price: "1395€",
     pack: [
+      "Passage à l'examen",
       "Frais de dossier",
       "Forfait code illimité en salle (6mois)",
       "Fournitures pédagogiques (livre de code, fiche suivi, livret d'apprentissage)",

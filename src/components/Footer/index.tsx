@@ -38,11 +38,11 @@ const Footer = () => {
             </div>
             <div className="flex items-center gap-2 text-sm text-white/80 mb-2">
               <FaPhone className="text-secondary flex-shrink-0" />
-              <span>01.60.08.19.11</span>
+              <span>0160081911</span>
             </div>
             <div className="flex items-center gap-2 text-sm text-white/80">
               <FaEnvelope className="text-secondary flex-shrink-0" />
-              <span>contact@acces-permis77.fr</span>
+              <span>accespermis77@gmail.com</span>
             </div>
           </div>
 
@@ -157,8 +157,9 @@ const Footer = () => {
                 <p className="font-medium text-sm mb-1">
                   Horaires d'ouverture :
                 </p>
-                <p className="text-white/80 text-xs">Lun-Ven : 9h-19h</p>
-                <p className="text-white/80 text-xs">Samedi : 9h-17h</p>
+                <p className="text-white/80 text-xs">
+                  Mar-Sam : 10h-14 & 16h-19h
+                </p>
               </div>
               <div>
                 <p className="font-medium text-sm mb-1">Paiements acceptés :</p>
@@ -166,7 +167,7 @@ const Footer = () => {
                 <p className="text-white/80 text-xs">Financement CPF</p>
               </div>
             </div>
-            
+
             {/* Certification Qualiopi */}
             <div className="mb-6">
               <a

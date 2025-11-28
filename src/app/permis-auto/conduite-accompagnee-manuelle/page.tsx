@@ -14,7 +14,8 @@ import {
 
 export const metadata: Metadata = {
   title: "Conduite Accompagnée Manuelle (AAC) - Accès Permis 77",
-  description: "Formation conduite accompagnée manuelle dès 15 ans. Apprentissage anticipé de la conduite avec Accès Permis 77.",
+  description:
+    "Formation conduite accompagnée manuelle dès 15 ans. Apprentissage anticipé de la conduite avec Accès Permis 77.",
 };
 
 export default function ConduiteAccompagneeManuelle() {
@@ -51,7 +52,7 @@ export default function ConduiteAccompagneeManuelle() {
     {
       title: "Meilleur taux de réussite",
       description:
-        "75% de réussite au premier passage contre 55% en formation classique grâce à l'expérience acquise",
+        "95% de réussite au premier passage contre 76% en formation classique grâce à l'expérience acquise",
       icon: <FaUserGraduate />,
     },
     {
@@ -71,7 +72,7 @@ export default function ConduiteAccompagneeManuelle() {
   const packages = [
     {
       name: "Forfait AAC 20h",
-      price: "1590€",
+      price: "1695€",
       duration: "Code + 20 leçons + suivi",
       features: [
         "Démarches administratives incluses",
@@ -88,6 +89,10 @@ export default function ConduiteAccompagneeManuelle() {
   ];
 
   const includedItems = [
+    {
+      label: "Passage à l’examen du permis de conduire",
+      included: true,
+    },
     {
       label: "Enregistrement en ligne et frais de gestion",
       included: true,
@@ -113,10 +118,6 @@ export default function ConduiteAccompagneeManuelle() {
       included: true,
       description: "RDV à 1500km et 2500km (2h chacun)",
     },
-    {
-      label: "Inscription théorique",
-      price: "30€",
-    },
   ];
 
   const paymentOptions = [
@@ -125,30 +126,30 @@ export default function ConduiteAccompagneeManuelle() {
       schedule: [
         {
           step: "À l'inscription",
-          amount: "530€",
+          amount: "565€",
           description: "Premier versement pour débuter la formation",
         },
         {
           step: "Au passage du code",
-          amount: "540€",
+          amount: "565€",
           description: "Deuxième versement après obtention du code",
         },
         {
           step: "À la 10ème leçon",
-          amount: "530€",
+          amount: "565€",
           description: "Solde à régler en cours de formation",
         },
-      ]
-    }
+      ],
+    },
   ];
 
   const additionalInfo = [
-    "Évaluation de départ gratuite pour évaluer précisément vos besoins en formation",
-    "Leçons supplémentaires disponibles à l'unité (45€) ou par forfait de 5 leçons",
-    "Taux de réussite exceptionnel de 75% au premier passage (vs 55% formation classique)",
+    "Évaluation de départ à 30€ pour évaluer précisément vos besoins en formation",
+    "Leçons supplémentaires disponibles à l'unité (65€)",
+    "Taux de réussite exceptionnel de 95% au premier passage (vs 76% formation classique)",
     "Période probatoire réduite à 2 ans au lieu de 3 ans",
     "Accompagnement personnalisé durant toute la période de conduite accompagnée",
-    "Réductions sur les assurances auto grâce à la formation AAC"
+    "Réductions sur les assurances auto grâce à la formation AAC",
   ];
 
   return (
@@ -161,9 +162,9 @@ export default function ConduiteAccompagneeManuelle() {
         pricing={[
           {
             title: "Forfait AAC 20h",
-            price: 1590,
-            hours: "Code + 20 leçons + suivi"
-          }
+            price: 1695,
+            hours: "Code + 20 leçons + suivi",
+          },
         ]}
         conditions={conditions}
       />

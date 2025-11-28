@@ -15,9 +15,10 @@ const picto = [
       "Nos moniteurs sont toujours à l’écoute, patient & professionel.",
   },
   {
-    title: "Conduite 6/7j",
+    title: "Conduite 5/7j",
     url: "/img/svg/about/calendar.svg",
-    description: "Des heures de conduites toute la semaine sauf le dimanche.",
+    description:
+      "5/7 du mardi au samedi sauf pour la conduite l’accélérée 7/7 y compris les jours fériés.",
   },
   {
     title: "Facilité de paiement",
@@ -35,7 +36,7 @@ const picto = [
     title: "Piste de moto privée",
     url: "/img/svg/about/moto.svg",
     description:
-      "Nous possédons notre piste de moto privée pour vos sessions sur plateau.",
+      "Nous possédons notre piste de moto privée pour vos sessions sur plateau (à 5 min de l’agence).",
   },
 ];
 

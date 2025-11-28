@@ -14,7 +14,8 @@ import {
 
 export const metadata: Metadata = {
   title: "Conduite Accompagnée Automatique - Accès Permis 77",
-  description: "Formation conduite accompagnée sur boîte automatique dès 15 ans. Apprentissage facilité avec Accès Permis 77.",
+  description:
+    "Formation conduite accompagnée sur boîte automatique dès 15 ans. Apprentissage facilité avec Accès Permis 77.",
 };
 
 export default function ConduiteAccompagneeAutomatique() {
@@ -36,7 +37,7 @@ export default function ConduiteAccompagneeAutomatique() {
     },
     {
       label: "Formation pratique",
-      value: "13 leçons minimum + accompagnement",
+      value: "13 leçons minimum + accompagnement + passage examen",
       icon: <MdStart />,
     },
   ];
@@ -71,7 +72,7 @@ export default function ConduiteAccompagneeAutomatique() {
   const packages = [
     {
       name: "Forfait AAC 13h",
-      price: "1400€",
+      price: "1500€",
       duration: "Code + 13 leçons + suivi",
       features: [
         "Démarches administratives incluses",
@@ -87,7 +88,7 @@ export default function ConduiteAccompagneeAutomatique() {
     },
     {
       name: "Forfait AAC 20h",
-      price: "1700€",
+      price: "1800€",
       duration: "Code + 20 leçons + suivi",
       features: [
         "Démarches administratives incluses",
@@ -103,6 +104,10 @@ export default function ConduiteAccompagneeAutomatique() {
   ];
 
   const includedItems = [
+    {
+      label: "Accompagnement à l’examen.",
+      included: true,
+    },
     {
       label: "Enregistrement en ligne et frais de gestion",
       included: true,
@@ -128,10 +133,6 @@ export default function ConduiteAccompagneeAutomatique() {
       included: true,
       description: "RDV à 1500km et 2500km (2h chacun)",
     },
-    {
-      label: "Inscription théorique",
-      price: "30€",
-    },
   ];
 
   const paymentOptions = [
@@ -140,25 +141,25 @@ export default function ConduiteAccompagneeAutomatique() {
       schedule: [
         {
           step: "À l'inscription",
-          amount: "350€",
+          amount: "375€",
           description: "Premier versement pour débuter la formation",
         },
         {
           step: "Au passage du code",
-          amount: "350€",
+          amount: "375€",
           description: "Deuxième versement après obtention du code",
         },
         {
           step: "À la 10ème leçon",
-          amount: "350€",
+          amount: "375€",
           description: "Troisième versement en cours de formation",
         },
         {
           step: "À la 18ème leçon",
-          amount: "350€",
+          amount: "375€",
           description: "Solde à régler en fin de formation",
         },
-      ]
+      ],
     },
     {
       hours: "Forfait AAC 20h",
@@ -183,17 +184,16 @@ export default function ConduiteAccompagneeAutomatique() {
           amount: "425€",
           description: "Solde à régler en cours de formation",
         },
-      ]
-    }
+      ],
+    },
   ];
 
   const additionalInfo = [
-    "Évaluation de départ gratuite pour évaluer précisément vos besoins en formation",
-    "Leçons supplémentaires disponibles à l'unité ou par forfait de 5 leçons",
-    "Taux de réussite exceptionnel de 75% au premier passage (vs 55% formation classique)",
+    "Leçons supplémentaires disponibles à l'unité",
+    "Taux de réussite exceptionnel de 95% au premier passage (vs 76% formation classique)",
     "Période probatoire réduite à 2 ans au lieu de 3 ans",
     "Accompagnement personnalisé durant toute la période de conduite accompagnée",
-    "Réductions sur les assurances auto grâce à la formation AAC"
+    "Réductions sur les assurances auto grâce à la formation AAC",
   ];
 
   return (
@@ -206,14 +206,14 @@ export default function ConduiteAccompagneeAutomatique() {
         pricing={[
           {
             title: "Forfait AAC 13h",
-            price: 1400,
-            hours: "Code + 13 leçons + suivi"
+            price: 1500,
+            hours: "Code + 13 leçons + suivi",
           },
           {
-            title: "Forfait AAC 20h", 
-            price: 1700,
-            hours: "Code + 20 leçons + suivi"
-          }
+            title: "Forfait AAC 20h",
+            price: 1800,
+            hours: "Code + 20 leçons + suivi",
+          },
         ]}
         conditions={conditions}
       />

@@ -4,7 +4,12 @@ import DescriptionSection from "@/components/Pages/DescriptionSection";
 import HeroSection from "@/components/Pages/HeroSection";
 import PricingSection from "@/components/Pages/PricingSection";
 import { Metadata } from "next";
-import { FaMotorcycle, FaClock, FaShieldAlt, FaUserGraduate } from "react-icons/fa";
+import {
+  FaClock,
+  FaMotorcycle,
+  FaShieldAlt,
+  FaUserGraduate,
+} from "react-icons/fa";
 import {
   MdDateRange,
   MdDirectionsCar,
@@ -14,7 +19,8 @@ import {
 
 export const metadata: Metadata = {
   title: "Formation AM (BSR) - Cyclomoteur et Quadricycle - Accès Permis 77",
-  description: "Formation AM obligatoire pour conduire cyclomoteurs et quadricycles légers. BSR avec Accès Permis 77.",
+  description:
+    "Formation AM obligatoire pour conduire cyclomoteurs et quadricycles légers. BSR avec Accès Permis 77.",
 };
 
 export default function FormationAM() {
@@ -74,6 +80,7 @@ export default function FormationAM() {
       price: "350€",
       duration: "8 heures de formation",
       features: [
+        "Fabrication du permis de conduire",
         "Frais de gestion inclus",
         "8h de formation (2h théorie + 6h pratique)",
         "3 mois d'accès offert à la salle de code",
@@ -100,7 +107,8 @@ export default function FormationAM() {
     {
       label: "Formation pratique",
       included: true,
-      description: "6 heures de pratique (2h hors circulation + 4h en circulation)",
+      description:
+        "6 heures de pratique (2h hors circulation + 4h en circulation)",
     },
     {
       label: "Accès salle de code",
@@ -133,8 +141,8 @@ export default function FormationAM() {
           amount: "350€",
           description: "Paiement unique pour la formation complète",
         },
-      ]
-    }
+      ],
+    },
   ];
 
   const additionalInfo = [
@@ -143,7 +151,7 @@ export default function FormationAM() {
     "Attestation AM valable à vie, pas de renouvellement nécessaire",
     "Formation théorique et pratique adaptée aux spécificités des deux-roues",
     "Possibilité de formation en groupe ou individuelle selon disponibilités",
-    "Véhicules école récents et équipés pour la sécurité"
+    "Véhicules école récents et équipés pour la sécurité",
   ];
 
   return (
@@ -157,8 +165,8 @@ export default function FormationAM() {
           {
             title: "Formation AM",
             price: 350,
-            hours: "8h de formation complète"
-          }
+            hours: "8h de formation complète",
+          },
         ]}
         conditions={conditions}
       />

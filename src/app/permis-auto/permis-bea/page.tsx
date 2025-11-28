@@ -72,7 +72,7 @@ export default function PermisBEA() {
   const packages = [
     {
       name: "Forfait 13h",
-      price: "850€",
+      price: "950€",
       duration: "Code + 13 leçons",
       features: [
         "Démarches administratives incluses",
@@ -86,7 +86,7 @@ export default function PermisBEA() {
     },
     {
       name: "Forfait 20h",
-      price: "1280€",
+      price: "1395€",
       duration: "Code + 20 leçons",
       features: [
         "Démarches administratives incluses",
@@ -103,17 +103,17 @@ export default function PermisBEA() {
     {
       label: "Enregistrement en ligne et frais de gestion",
       included: true,
-      description: "Toutes les démarches administratives"
+      description: "Toutes les démarches administratives",
     },
     {
       label: "Code en salle illimité",
       included: true,
-      description: "Pendant 6 mois"
+      description: "Pendant 6 mois",
     },
     {
       label: "Livre de code et supports pédagogiques",
       included: true,
-      description: "Fiche de suivi + livret d'apprentissage"
+      description: "Fiche de suivi + livret d'apprentissage",
     },
     {
       label: "Leçons de conduite automatique",
@@ -122,8 +122,8 @@ export default function PermisBEA() {
     },
     {
       label: "Inscription théorique",
-      price: "30€"
-    }
+      price: "30€",
+    },
   ];
 
   const paymentOptions = [
@@ -145,7 +145,7 @@ export default function PermisBEA() {
           amount: "250€",
           description: "Solde à régler en cours de formation",
         },
-      ]
+      ],
     },
     {
       hours: "Forfait 20h",
@@ -165,8 +165,8 @@ export default function PermisBEA() {
           amount: "400€",
           description: "Solde à régler en cours de formation",
         },
-      ]
-    }
+      ],
+    },
   ];
 
   const additionalInfo = [
@@ -175,7 +175,7 @@ export default function PermisBEA() {
     "Taux de réussite exceptionnel de 82% au premier passage de l'examen",
     "Formation adaptée à votre rythme avec un suivi personnalisé constant",
     "Véhicules automatiques récents équipés de double commande et technologies de sécurité",
-    "Possibilité de financement CPF (Compte Personnel de Formation) selon éligibilité"
+    "Possibilité de financement CPF (Compte Personnel de Formation) selon éligibilité",
   ];
 
   return (
@@ -189,13 +189,13 @@ export default function PermisBEA() {
           {
             title: "Forfait 13h",
             price: 850,
-            hours: "Code + 13 leçons"
+            hours: "Code + 13 leçons",
           },
           {
-            title: "Forfait 20h", 
+            title: "Forfait 20h",
             price: 1280,
-            hours: "Code + 20 leçons"
-          }
+            hours: "Code + 20 leçons",
+          },
         ]}
         conditions={conditions}
       />

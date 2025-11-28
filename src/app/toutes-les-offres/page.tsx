@@ -55,16 +55,17 @@ export default function ToutesLesOffres() {
           pricing: [
             {
               hours: "Code + 20h",
-              price: 1280,
+              price: 1395,
               description: "Forfait standard",
             },
             {
               hours: "Code + 30h",
-              price: 1700,
+              price: 2000,
               description: "Forfait renforcé",
             },
           ],
           features: [
+            "Passage à l'examen",
             "Code illimité 6 mois",
             "Fournitures incluses",
             "Démarches administratives",
@@ -77,11 +78,12 @@ export default function ToutesLesOffres() {
           pricing: [
             {
               hours: "Code + 13h",
-              price: 1180,
+              price: 950,
               description: "Formation minimum légale",
             },
           ],
           features: [
+            "Passage à l'examen",
             "Code illimité 6 mois",
             "Formation simplifiée",
             "Véhicule automatique",
@@ -256,25 +258,25 @@ export default function ToutesLesOffres() {
   const unitRates: UnitRate[] = [
     {
       service: "Évaluation de départ boîte manuelle",
-      price: 25,
+      price: 30,
       unit: "la séance",
       description: "Évaluation initiale pour déterminer le niveau",
     },
     {
       service: "Évaluation de départ boîte automatique",
-      price: 30,
+      price: 35,
       unit: "la séance",
       description: "Évaluation initiale pour déterminer le niveau",
     },
     {
       service: "Évaluation de départ moto",
-      price: 30,
+      price: 35,
       unit: "la séance",
       description: "Évaluation initiale pour déterminer le niveau",
     },
     {
       service: "Leçon de conduite boîte manuelle",
-      price: 60,
+      price: 65,
       unit: "la leçon",
       description: "Leçon standard de conduite",
     },
@@ -286,7 +288,7 @@ export default function ToutesLesOffres() {
     },
     {
       service: "Leçon de conduite boîte automatique",
-      price: 65,
+      price: 70,
       unit: "la leçon",
       description: "Leçon standard de conduite",
     },
@@ -298,13 +300,13 @@ export default function ToutesLesOffres() {
     },
     {
       service: "Leçon de conduite en moto plateau",
-      price: 60,
+      price: 65,
       unit: "la leçon",
       description: "Formation sur plateau moto",
     },
     {
       service: "Leçon de conduite en moto circulation",
-      price: 65,
+      price: 70,
       unit: "la leçon",
       description: "Formation en circulation",
     },
@@ -358,37 +360,37 @@ export default function ToutesLesOffres() {
     },
     {
       service: "1er RDV pédagogie théorique et pratique à 1500km",
-      price: 90,
+      price: 180,
       unit: "le RDV",
       description: "Conduite accompagnée",
     },
     {
       service: "2e RDV pédagogie théorique et pratique à 3000km",
-      price: 90,
+      price: 180,
       unit: "le RDV",
       description: "Conduite accompagnée",
     },
     {
       service: "Présentation examen plateau (A2)",
-      price: 60,
+      price: 65,
       unit: "la présentation",
       description: "Épreuve moto",
     },
     {
       service: "Présentation examen circulation (A2)",
-      price: 60,
+      price: 65,
       unit: "la présentation",
       description: "Épreuve moto",
     },
     {
       service: "Frais accompagnement examen pratique B",
-      price: 60,
+      price: 65,
       unit: "la présentation",
       description: "Véhicule et moniteur inclus",
     },
     {
       service: "Frais accompagnement examen pratique BA",
-      price: 65,
+      price: 70,
       unit: "la présentation",
       description: "Véhicule automatique et moniteur inclus",
     },
@@ -400,19 +402,21 @@ export default function ToutesLesOffres() {
     },
     {
       service: "Frais de gestion suite à un échec de l'examen pratique B",
-      price: 100,
+      price: 200,
       unit: "le dossier",
       description: "Frais de représentation",
     },
     {
-      service: "Frais de gestion suite à un échec de l'examen pratique circulation A",
-      price: 100,
+      service:
+        "Frais de gestion suite à un échec de l'examen pratique circulation A",
+      price: 200,
       unit: "le dossier",
       description: "Frais de représentation moto",
     },
     {
-      service: "Frais de gestion suite à un échec de l'examen pratique plateau A",
-      price: 100,
+      service:
+        "Frais de gestion suite à un échec de l'examen pratique plateau A",
+      price: 200,
       unit: "le dossier",
       description: "Frais de représentation moto",
     },
@@ -436,7 +440,7 @@ export default function ToutesLesOffres() {
     },
     {
       service: "Changement de formation avant ou après examen",
-      price: 50,
+      price: 150,
       unit: "le changement",
       description: "Frais de modification",
     },
@@ -481,14 +485,16 @@ export default function ToutesLesOffres() {
                       Auto
                     </div>
                     <div className="text-sm text-gray-600">
-                      Permis B, BEA, AAC
+                      Permis B, BEA, AAC, AM (Voiture SP)
                     </div>
                   </div>
                   <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 text-center border border-primary/10">
                     <div className="text-2xl font-bold text-primary mb-1">
                       Moto
                     </div>
-                    <div className="text-sm text-gray-600">A1, A2, 125cm³</div>
+                    <div className="text-sm text-gray-600">
+                      A1, A2, 125cm³, AM (BSR)
+                    </div>
                   </div>
                   <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 text-center border border-primary/10">
                     <div className="text-2xl font-bold text-primary mb-1">
@@ -655,7 +661,7 @@ export default function ToutesLesOffres() {
                   <span className="text-secondary font-bold text-sm">✓</span>
                 </div>
                 <p className="text-gray-700 font-medium text-sm">
-                  Évaluation de départ gratuite et sans engagement
+                  Évaluation de départ obligatoire et sans engagement
                 </p>
               </div>
             </div>
