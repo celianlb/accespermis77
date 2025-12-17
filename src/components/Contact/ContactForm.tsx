@@ -151,11 +151,14 @@ export default function ContactForm({
               <span className="font-semibold">Sélection :</span>{" "}
               {formData.permis}
               {formData.forfait && ` - ${formData.forfait}`}
-              {selectedPrice && (
-                <span className="ml-2 text-secondary font-bold">
-                  {selectedPrice}
-                </span>
-              )}
+              {/* Afficher le prix seulement si les sélections correspondent à celles de l'URL */}
+              {selectedPrice &&
+                selectedPermis === formData.permis &&
+                selectedForfait === formData.forfait && (
+                  <span className="ml-2 text-secondary font-bold">
+                    {selectedPrice}
+                  </span>
+                )}
             </p>
           </div>
         )}

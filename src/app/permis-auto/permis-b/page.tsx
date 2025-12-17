@@ -72,7 +72,7 @@ export default function PermisB() {
   const packages = [
     {
       name: "Forfait 20h",
-      price: "1280€",
+      price: "1395€",
       duration: "Code + 20 leçons",
       features: [
         "Démarches administratives incluses",
@@ -86,7 +86,7 @@ export default function PermisB() {
     },
     {
       name: "Forfait 30h",
-      price: "1700€",
+      price: "2000€",
       duration: "Code + 30 leçons",
       features: [
         "Démarches administratives incluses",
@@ -132,46 +132,46 @@ export default function PermisB() {
       schedule: [
         {
           step: "À l'inscription",
-          amount: "480€",
+          amount: "465€",
           description: "Premier versement pour débuter la formation",
         },
         {
           step: "Au passage du code",
-          amount: "400€",
+          amount: "465€",
           description: "Deuxième versement après obtention du code",
         },
         {
           step: "À la 10ème leçon",
-          amount: "400€",
+          amount: "465€",
           description: "Solde à régler en cours de formation",
         },
-      ]
+      ],
     },
     {
       hours: "Forfait 30h",
       schedule: [
         {
           step: "À l'inscription",
-          amount: "425€",
+          amount: "500€",
           description: "Premier versement pour débuter la formation",
         },
         {
           step: "Au passage du code",
-          amount: "425€",
+          amount: "500€",
           description: "Deuxième versement après obtention du code",
         },
         {
           step: "À la 1ère leçon",
-          amount: "425€",
+          amount: "500€",
           description: "Troisième versement au début de la conduite",
         },
         {
           step: "À la 15ème leçon",
-          amount: "425€",
+          amount: "500€",
           description: "Solde à régler en cours de formation",
         },
-      ]
-    }
+      ],
+    },
   ];
 
   const additionalInfo = [
@@ -180,7 +180,7 @@ export default function PermisB() {
     "Taux de réussite exceptionnel de 82% au premier passage de l'examen",
     "Formation adaptée à votre rythme avec un suivi personnalisé constant",
     "Véhicules école récents équipés de double commande et technologies de sécurité",
-    "Possibilité de financement CPF (Compte Personnel de Formation) selon éligibilité"
+    "Possibilité de financement CPF (Compte Personnel de Formation) selon éligibilité",
   ];
 
   return (
@@ -193,14 +193,14 @@ export default function PermisB() {
         pricing={[
           {
             title: "Forfait 20h",
-            price: 1280,
-            hours: "Code + 20 leçons"
+            price: 1395,
+            hours: "Code + 20 leçons",
           },
           {
-            title: "Forfait 30h", 
-            price: 1700,
-            hours: "Code + 30 leçons"
-          }
+            title: "Forfait 30h",
+            price: 2000,
+            hours: "Code + 30 leçons",
+          },
         ]}
         conditions={conditions}
       />
