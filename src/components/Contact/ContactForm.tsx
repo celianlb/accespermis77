@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface ContactFormProps {
   selectedFormula?: string;
@@ -19,6 +19,16 @@ export default function ContactForm({
     formule: selectedFormula || "",
     message: "",
   });
+
+  // Mettre à jour la formule quand selectedFormula change
+  useEffect(() => {
+    if (selectedFormula) {
+      setFormData((prev) => ({
+        ...prev,
+        formule: selectedFormula,
+      }));
+    }
+  }, [selectedFormula]);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
