@@ -145,12 +145,12 @@ export default function ContactForm({
           Remplissez le formulaire ci-dessous et nous vous recontacterons dans
           les plus brefs délais pour discuter de votre projet.
         </p>
-        {selectedPermis && (
+        {formData.permis && (
           <div className="mt-4 p-4 bg-secondary/10 rounded-lg border border-secondary/20">
             <p className="text-sm text-gray-700">
               <span className="font-semibold">Sélection :</span>{" "}
-              {selectedPermis}
-              {selectedForfait && ` - ${selectedForfait}`}
+              {formData.permis}
+              {formData.forfait && ` - ${formData.forfait}`}
               {selectedPrice && (
                 <span className="ml-2 text-secondary font-bold">
                   {selectedPrice}
