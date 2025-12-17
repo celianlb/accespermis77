@@ -31,7 +31,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${montserrat.className}  ${mukta.className} `}>
+    <html
+      lang="fr"
+      className={`${montserrat.className}  ${mukta.className} scroll-smooth `}
+    >
       <body className={` text-primary`}>
         <Header />
         {children}

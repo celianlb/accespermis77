@@ -188,12 +188,12 @@ export default function PermisBEA() {
         pricing={[
           {
             title: "Forfait 13h",
-            price: 850,
+            price: 950,
             hours: "Code + 13 leçons",
           },
           {
             title: "Forfait 20h",
-            price: 1280,
+            price: 1395,
             hours: "Code + 20 leçons",
           },
         ]}

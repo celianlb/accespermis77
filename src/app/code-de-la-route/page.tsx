@@ -1,62 +1,226 @@
+import AdvantagesSection from "@/components/Pages/AdvantagesSection";
+import CTASection from "@/components/Pages/CTASection";
+import DescriptionSection from "@/components/Pages/DescriptionSection";
+import HeroSection from "@/components/Pages/HeroSection";
+import PricingSection from "@/components/Pages/PricingSection";
 import { Metadata } from "next";
+import {
+  FaBook,
+  FaClock,
+  FaLaptop,
+  FaMobileAlt,
+  FaUserGraduate,
+  FaCheckCircle,
+} from "react-icons/fa";
+import {
+  MdDateRange,
+  MdQuiz,
+  MdSchool,
+  MdAccessTime,
+} from "react-icons/md";
 
 export const metadata: Metadata = {
   title: "Code de la route - Accès Permis 77",
-  description: "Apprenez le code de la route avec notre auto-école Accès Permis 77. Formation complète et personnalisée pour réussir votre examen du code.",
+  description:
+    "Apprenez le code de la route avec notre auto-école Accès Permis 77. Formation complète et personnalisée pour réussir votre examen du code.",
 };
 
 export default function CodeDeLaRoute() {
+  const conditions = [
+    {
+      label: "Âge minimum",
+      value: "15 ans",
+      icon: <MdDateRange />,
+    },
+    {
+      label: "Validité",
+      value: "5 ans",
+      icon: <MdAccessTime />,
+    },
+    {
+      label: "Taux de réussite",
+      value: "95%",
+      icon: <MdQuiz />,
+    },
+    {
+      label: "Formation",
+      value: "Salle + en ligne",
+      icon: <MdSchool />,
+    },
+  ];
+
+  const advantages = [
+    {
+      title: "Formation en salle illimitée",
+      description:
+        "Accès illimité pendant 6 mois à nos salles de code avec suivi par un moniteur diplômé",
+      icon: <FaBook />,
+    },
+    {
+      title: "Plateforme en ligne",
+      description:
+        "Plus de 10 000 questions conformes à l'examen, accessibles 24h/24 et 7j/7",
+      icon: <FaLaptop />,
+    },
+    {
+      title: "Application mobile",
+      description:
+        "Révisez partout avec notre application mobile disponible sur iOS et Android",
+      icon: <FaMobileAlt />,
+    },
+    {
+      title: "Suivi personnalisé",
+      description:
+        "Tests blancs réguliers et suivi de votre progression par nos moniteurs",
+      icon: <FaUserGraduate />,
+    },
+    {
+      title: "Horaires flexibles",
+      description:
+        "Cours de code disponibles du lundi au samedi avec des créneaux adaptés",
+      icon: <FaClock />,
+    },
+    {
+      title: "Préparation complète",
+      description:
+        "Cours thématiques, tests d'entraînement et examens blancs pour réussir du premier coup",
+      icon: <FaCheckCircle />,
+    },
+  ];
+
+  const packages = [
+    {
+      name: "Code de la route",
+      price: "350€",
+      duration: "Formation complète",
+      features: [
+        "Accès illimité en salle pendant 6 mois",
+        "Plateforme en ligne illimitée",
+        "Application mobile incluse",
+        "Plus de 10 000 questions",
+        "Cours thématiques détaillés",
+        "Tests d'entraînement et examens blancs",
+        "Suivi personnalisé par un moniteur",
+        "Inscription à l'examen incluse",
+      ],
+      highlighted: true,
+      badge: "Formule complète",
+    },
+  ];
+
+  const includedItems = [
+    {
+      label: "Accès en salle",
+      included: true,
+      description: "Illimité pendant 6 mois",
+    },
+    {
+      label: "Plateforme en ligne",
+      included: true,
+      description: "24h/24 et 7j/7",
+    },
+    {
+      label: "Application mobile",
+      included: true,
+      description: "iOS et Android",
+    },
+    {
+      label: "Cours thématiques",
+      included: true,
+      description: "10 thèmes du code de la route",
+    },
+    {
+      label: "Tests d'entraînement",
+      included: true,
+      description: "Plus de 10 000 questions",
+    },
+    {
+      label: "Examens blancs",
+      included: true,
+      description: "Conditions réelles d'examen",
+    },
+    {
+      label: "Suivi personnalisé",
+      included: true,
+      description: "Par un moniteur diplômé",
+    },
+    {
+      label: "Inscription examen",
+      included: true,
+      description: "Démarches administratives incluses",
+    },
+  ];
+
+  const paymentOptions = [
+    {
+      hours: "Code de la route",
+      schedule: [
+        {
+          step: "À l'inscription",
+          amount: "350€",
+          description: "Paiement unique pour l'accès complet",
+        },
+      ],
+    },
+  ];
+
+  const additionalInfo = [
+    "Accès illimité en salle pendant 6 mois pour vous entraîner autant que nécessaire",
+    "Plateforme en ligne accessible 24h/24 avec suivi de votre progression",
+    "Application mobile pour réviser partout et à tout moment",
+    "Tests d'entraînement conformes à l'examen officiel",
+    "Suivi personnalisé par nos moniteurs diplômés d'État",
+    "Inscription à l'examen incluse dans le forfait",
+  ];
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-primary mb-8 text-center">
-            Code de la route
-          </h1>
-          
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-              Formation au code de la route
-            </h2>
-            <p className="text-gray-600 leading-relaxed mb-6">
-              Préparez-vous efficacement à l'examen théorique général (ETG) avec notre formation complète au code de la route. 
-              Notre équipe pédagogique vous accompagne dans votre apprentissage avec des outils modernes et une méthode éprouvée.
-            </p>
-            
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-secondary/5 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-secondary mb-4">
-                  Formation en salle
-                </h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Cours théoriques avec moniteur</li>
-                  <li>• Tests blancs réguliers</li>
-                  <li>• Suivi personnalisé</li>
-                  <li>• Horaires flexibles</li>
-                </ul>
-              </div>
-              
-              <div className="bg-primary/5 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-primary mb-4">
-                  Formation en ligne
-                </h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Accès 24h/24 et 7j/7</li>
-                  <li>• Plus de 10 000 questions</li>
-                  <li>• Cours vidéo interactifs</li>
-                  <li>• Application mobile</li>
-                </ul>
-              </div>
-            </div>
-            
-            <div className="text-center">
-              <button className="bg-secondary text-white px-8 py-3 rounded-lg font-semibold hover:bg-secondary/90 transition-colors">
-                Commencer ma formation
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div className="min-h-screen">
+      <HeroSection
+        title="Code de la route"
+        subtitle="Formation théorique complète"
+        description="Préparez-vous efficacement à l'examen théorique général (ETG) avec notre formation complète en salle et en ligne. Méthode éprouvée avec un taux de réussite de 95%."
+        icon={<FaBook />}
+        pricing={[
+          {
+            title: "Code de la route",
+            price: 350,
+            hours: "Formation complète",
+          },
+        ]}
+        conditions={conditions}
+      />
+
+      <DescriptionSection
+        title="code de la route"
+        whatIsIt="L'examen théorique général (ETG), communément appelé 'code de la route', est l'épreuve théorique obligatoire pour obtenir le permis de conduire. Il évalue vos connaissances du code de la route à travers 40 questions portant sur 10 thèmes différents : circulation routière, conducteur, route, autres usagers, notions diverses, premiers secours, mécanique et équipements, sécurité du passager et véhicule, environnement, et les nouvelles règles de circulation."
+        whatIsItFor="Le code de la route sert à garantir que tous les conducteurs possèdent les connaissances essentielles pour circuler en toute sécurité. Cette formation permet de comprendre les règles de circulation, d'anticiper les dangers, de connaître vos droits et devoirs en tant que conducteur, et d'adopter une conduite responsable et respectueuse de l'environnement. Le code est valable 5 ans et constitue la première étape indispensable avant la formation pratique."
+        whatIsItImage="/img/permis/code.jpg"
+        whatIsItForImage="/img/permis/licence-driver.svg"
+        bgColor="bg-gray-50"
+      />
+
+      <AdvantagesSection
+        title="Pourquoi choisir notre formation au code ?"
+        advantages={advantages}
+        bgColor="bg-white"
+      />
+
+      <PricingSection
+        title="Notre formation code de la route"
+        packages={packages}
+        includedItems={includedItems}
+        paymentOptions={paymentOptions}
+        additionalInfo={additionalInfo}
+      />
+
+      <CTASection
+        title="Prêt à réussir votre code ?"
+        description="Inscrivez-vous dès aujourd'hui et commencez votre formation avec notre méthode éprouvée"
+        buttons={[
+          { text: "S'inscrire maintenant", variant: "primary" },
+          { text: "Demander des informations", variant: "secondary" },
+        ]}
+      />
     </div>
   );
 }

@@ -135,8 +135,18 @@ export default function Permis125A1() {
       schedule: [
         {
           step: "À l'inscription",
-          amount: "900€",
-          description: "Paiement unique pour la formation complète",
+          amount: "300€",
+          description: "Premier versement pour débuter la formation",
+        },
+        {
+          step: "Au passage du code",
+          amount: "300€",
+          description: "Deuxième versement après obtention de l'ETM",
+        },
+        {
+          step: "À la 10ème leçon de conduite",
+          amount: "300€",
+          description: "Solde à régler en cours de formation",
         },
       ]
     }

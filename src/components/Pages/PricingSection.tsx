@@ -47,7 +47,7 @@ export default function PricingSection({
 }: PricingSectionProps) {
   const [selectedPaymentOption, setSelectedPaymentOption] = useState(0);
   return (
-    <section className="py-40 ">
+    <section id="pricing" className="py-40 scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-sans font-bold  text-gray-800 mb-24">

@@ -94,7 +94,7 @@ export default function HeroSection({
                     )}
                   </div>
                 </div>
-                <CTA>Je découvre</CTA>
+                <CTA href="#pricing">Je découvre</CTA>
               </div>
             ))}
           </div>
@@ -116,7 +116,7 @@ export default function HeroSection({
                   )}
                 </div>
               </div>
-              <CTA className="text-sm py-2">Je découvre</CTA>
+              <CTA href="#pricing" className="text-sm py-2">Je découvre</CTA>
             </div>
           ))}
         </div>

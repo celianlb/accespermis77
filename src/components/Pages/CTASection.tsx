@@ -52,17 +52,17 @@ export default function CTASection({
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm">
               <a
-                href="tel:0164879271"
+                href="tel:0160081911"
                 className="text-white/90 hover:text-white transition-colors flex items-center gap-2"
               >
-                <FaPhone className="text-sm" /> 01 64 87 92 71
+                <FaPhone className="text-sm" /> 0160081911
               </a>
               <span className="hidden sm:block text-white/50">•</span>
               <a
-                href="mailto:contact@accespermis77.fr"
+                href="mailto:accespermis77@gmail.com"
                 className="text-white/90 hover:text-white transition-colors flex items-center gap-2"
               >
-                <FaEnvelope className="text-sm" /> contact@accespermis77.fr
+                <FaEnvelope className="text-sm" /> accespermis77@gmail.com
               </a>
             </div>
           </div>
