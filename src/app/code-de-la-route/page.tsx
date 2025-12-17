@@ -206,6 +206,7 @@ export default function CodeDeLaRoute() {
       />
 
       <PricingSection
+        permisType="Code de la route"
         title="Notre formation code de la route"
         packages={packages}
         includedItems={includedItems}

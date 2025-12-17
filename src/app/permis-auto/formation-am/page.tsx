@@ -187,6 +187,7 @@ export default function FormationAM() {
       />
 
       <PricingSection
+        permisType="Formation AM"
         title="Notre formation AM"
         packages={packages}
         includedItems={includedItems}

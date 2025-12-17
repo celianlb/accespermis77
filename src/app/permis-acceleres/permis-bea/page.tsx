@@ -217,6 +217,7 @@ export default function PermisBEAAccelere() {
       />
 
       <PricingSection
+        permisType="Permis BEA Accéléré"
         title="Nos forfaits permis BEA accéléré"
         packages={packages}
         includedItems={includedItems}

@@ -189,6 +189,7 @@ export default function PermisA2() {
       />
 
       <PricingSection
+        permisType="Permis A2"
         title="Notre formation permis A2"
         packages={packages}
         includedItems={includedItems}

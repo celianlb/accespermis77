@@ -173,6 +173,7 @@ export default function PasserelleBEAversB() {
       />
 
       <PricingSection
+        permisType="Passerelle BEA vers B"
         title="Notre formation passerelle"
         packages={packages}
         includedItems={includedItems}

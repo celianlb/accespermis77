@@ -218,6 +218,7 @@ export default function PermisBAccelere() {
       />
 
       <PricingSection
+        permisType="Permis B Accéléré"
         title="Nos forfaits permis B accéléré"
         packages={packages}
         includedItems={includedItems}

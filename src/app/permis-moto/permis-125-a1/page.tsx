@@ -194,6 +194,7 @@ export default function Permis125A1() {
       />
 
       <PricingSection
+        permisType="Permis 125 A1"
         title="Notre formation permis A1"
         packages={packages}
         includedItems={includedItems}

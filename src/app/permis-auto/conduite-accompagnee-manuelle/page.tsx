@@ -185,6 +185,7 @@ export default function ConduiteAccompagneeManuelle() {
       />
 
       <PricingSection
+        permisType="Conduite accompagnée manuelle"
         title="Notre forfait conduite accompagnée"
         packages={packages}
         includedItems={includedItems}

@@ -234,6 +234,7 @@ export default function ConduiteAccompagneeAutomatique() {
       />
 
       <PricingSection
+        permisType="Conduite accompagnée automatique"
         title="Nos forfaits conduite accompagnée automatique"
         packages={packages}
         includedItems={includedItems}

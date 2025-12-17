@@ -216,6 +216,7 @@ export default function PermisBEA() {
       />
 
       <PricingSection
+        permisType="Permis BEA (Boîte automatique)"
         title="Nos forfaits permis BEA"
         packages={packages}
         includedItems={includedItems}

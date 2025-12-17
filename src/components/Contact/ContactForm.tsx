@@ -3,12 +3,31 @@
 import { useState, useEffect } from "react";
 
 interface ContactFormProps {
-  selectedFormula?: string;
+  selectedPermis?: string;
+  selectedForfait?: string;
   selectedPrice?: string;
 }
 
+// Définition des formules par permis
+const FORMULES_PAR_PERMIS: Record<string, string[]> = {
+  "Permis B": ["Forfait 20h", "Forfait 30h"],
+  "Permis BEA (Boîte automatique)": ["Forfait 20h", "Forfait 30h"],
+  "Conduite accompagnée manuelle": ["Formation complète"],
+  "Conduite accompagnée automatique": ["Formation complète"],
+  "Formation AM": ["Formation complète"],
+  "Passerelle BEA vers B": ["Formation 7h"],
+  "Permis A2": ["Formation complète"],
+  "Permis 125 A1": ["Formation complète"],
+  "Passerelle A2 vers A": ["Formation 7h"],
+  "Formation 125": ["Formation 7h"],
+  "Permis B Accéléré": ["Forfait 20h", "Forfait 30h"],
+  "Permis BEA Accéléré": ["Forfait 20h", "Forfait 30h"],
+  "Code de la route": ["Formation complète"],
+};
+
 export default function ContactForm({
-  selectedFormula,
+  selectedPermis,
+  selectedForfait,
   selectedPrice,
 }: ContactFormProps) {
   const [formData, setFormData] = useState({
@@ -16,19 +35,21 @@ export default function ContactForm({
     prenom: "",
     email: "",
     telephone: "",
-    formule: selectedFormula || "",
+    permis: selectedPermis || "",
+    forfait: selectedForfait || "",
     message: "",
   });
 
-  // Mettre à jour la formule quand selectedFormula change
+  // Mettre à jour les sélections quand les props changent
   useEffect(() => {
-    if (selectedFormula) {
+    if (selectedPermis) {
       setFormData((prev) => ({
         ...prev,
-        formule: selectedFormula,
+        permis: selectedPermis,
+        forfait: selectedForfait || "",
       }));
     }
-  }, [selectedFormula]);
+  }, [selectedPermis, selectedForfait]);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
@@ -42,10 +63,20 @@ export default function ContactForm({
     >
   ) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+
+    // Si on change le permis, réinitialiser le forfait
+    if (name === "permis") {
+      setFormData((prev) => ({
+        ...prev,
+        [name]: value,
+        forfait: "", // Réinitialiser le forfait
+      }));
+    } else {
+      setFormData((prev) => ({
+        ...prev,
+        [name]: value,
+      }));
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -54,13 +85,20 @@ export default function ContactForm({
     setSubmitStatus({ type: null, message: "" });
 
     try {
-      // TODO: Remplacer par votre endpoint API
+      // Construire la formule complète pour l'envoi
+      const formuleComplete = formData.forfait
+        ? `${formData.permis} - ${formData.forfait}`
+        : formData.permis;
+
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          formule: formuleComplete,
+        }),
       });
 
       if (response.ok) {
@@ -74,7 +112,8 @@ export default function ContactForm({
           prenom: "",
           email: "",
           telephone: "",
-          formule: "",
+          permis: "",
+          forfait: "",
           message: "",
         });
       } else {
@@ -91,6 +130,11 @@ export default function ContactForm({
     }
   };
 
+  // Obtenir les forfaits disponibles pour le permis sélectionné
+  const forfaitsDisponibles = formData.permis
+    ? FORMULES_PAR_PERMIS[formData.permis] || []
+    : [];
+
   return (
     <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
       <div className="mb-8">
@@ -101,11 +145,12 @@ export default function ContactForm({
           Remplissez le formulaire ci-dessous et nous vous recontacterons dans
           les plus brefs délais pour discuter de votre projet.
         </p>
-        {selectedFormula && (
+        {selectedPermis && (
           <div className="mt-4 p-4 bg-secondary/10 rounded-lg border border-secondary/20">
             <p className="text-sm text-gray-700">
-              <span className="font-semibold">Formule sélectionnée :</span>{" "}
-              {selectedFormula}
+              <span className="font-semibold">Sélection :</span>{" "}
+              {selectedPermis}
+              {selectedForfait && ` - ${selectedForfait}`}
               {selectedPrice && (
                 <span className="ml-2 text-secondary font-bold">
                   {selectedPrice}
@@ -201,39 +246,73 @@ export default function ContactForm({
           </div>
         </div>
 
-        {/* Formule */}
+        {/* Permis */}
         <div>
           <label
-            htmlFor="formule"
+            htmlFor="permis"
             className="block text-sm font-semibold text-gray-700 mb-2"
           >
-            Formule souhaitée
+            Type de permis *
           </label>
           <select
-            id="formule"
-            name="formule"
-            value={formData.formule}
+            id="permis"
+            name="permis"
+            value={formData.permis}
             onChange={handleChange}
+            required
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all"
           >
-            <option value="">Sélectionnez une formule</option>
-            <option value="Permis B">Permis B</option>
-            <option value="Permis BEA">Permis BEA (Boîte automatique)</option>
-            <option value="Conduite accompagnée manuelle">
-              Conduite accompagnée manuelle
-            </option>
-            <option value="Conduite accompagnée automatique">
-              Conduite accompagnée automatique
-            </option>
-            <option value="Formation AM">Formation AM</option>
-            <option value="Passerelle BEA vers B">Passerelle BEA vers B</option>
-            <option value="Permis A2">Permis A2</option>
-            <option value="Permis 125 A1">Permis 125 A1</option>
-            <option value="Passerelle A2 vers A">Passerelle A2 vers A</option>
-            <option value="Formation 125">Formation 125</option>
+            <option value="">Sélectionnez un permis</option>
+            <optgroup label="Permis Auto">
+              <option value="Permis B">Permis B</option>
+              <option value="Permis BEA (Boîte automatique)">Permis BEA (Boîte automatique)</option>
+              <option value="Conduite accompagnée manuelle">Conduite accompagnée manuelle</option>
+              <option value="Conduite accompagnée automatique">Conduite accompagnée automatique</option>
+              <option value="Formation AM">Formation AM</option>
+              <option value="Passerelle BEA vers B">Passerelle BEA vers B</option>
+            </optgroup>
+            <optgroup label="Permis Moto">
+              <option value="Permis A2">Permis A2</option>
+              <option value="Permis 125 A1">Permis 125 A1</option>
+              <option value="Passerelle A2 vers A">Passerelle A2 vers A</option>
+              <option value="Formation 125">Formation 125</option>
+            </optgroup>
+            <optgroup label="Permis Accélérés">
+              <option value="Permis B Accéléré">Permis B Accéléré</option>
+              <option value="Permis BEA Accéléré">Permis BEA Accéléré</option>
+            </optgroup>
+            <optgroup label="Code">
+              <option value="Code de la route">Code de la route</option>
+            </optgroup>
             <option value="Autre">Autre</option>
           </select>
         </div>
+
+        {/* Forfait - conditionnel */}
+        {formData.permis && forfaitsDisponibles.length > 0 && (
+          <div>
+            <label
+              htmlFor="forfait"
+              className="block text-sm font-semibold text-gray-700 mb-2"
+            >
+              Formule
+            </label>
+            <select
+              id="forfait"
+              name="forfait"
+              value={formData.forfait}
+              onChange={handleChange}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all"
+            >
+              <option value="">Sélectionnez une formule (optionnel)</option>
+              {forfaitsDisponibles.map((forfait) => (
+                <option key={forfait} value={forfait}>
+                  {forfait}
+                </option>
+              ))}
+            </select>
+          </div>
+        )}
 
         {/* Message */}
         <div>

@@ -174,6 +174,7 @@ export default function PasserelleA2versA() {
       />
 
       <PricingSection
+        permisType="Passerelle A2 vers A"
         title="Notre formation passerelle A2 vers A"
         packages={packages}
         includedItems={includedItems}

@@ -169,6 +169,7 @@ export default function Formation125() {
       />
 
       <PricingSection
+        permisType="Formation 125"
         title="Notre formation 125"
         packages={packages}
         includedItems={includedItems}

@@ -36,6 +36,7 @@ interface PricingSectionProps {
   includedItems?: PricingItem[];
   paymentOptions?: PaymentOption[];
   additionalInfo?: string[];
+  permisType?: string; // Type de permis (ex: "Permis B", "Permis A2", etc.)
 }
 
 export default function PricingSection({
@@ -44,6 +45,7 @@ export default function PricingSection({
   includedItems = [],
   paymentOptions = [],
   additionalInfo = [],
+  permisType = "",
 }: PricingSectionProps) {
   const [selectedPaymentOption, setSelectedPaymentOption] = useState(0);
   return (
@@ -96,7 +98,7 @@ export default function PricingSection({
                   </ul>
 
                   <Link
-                    href={`/contact?formule=${encodeURIComponent(pkg.name)}&prix=${encodeURIComponent(pkg.price)}`}
+                    href={`/contact?permis=${encodeURIComponent(permisType)}&forfait=${encodeURIComponent(pkg.name)}&prix=${encodeURIComponent(pkg.price)}`}
                     className={`w-full py-3 rounded-lg font-semibold transition-colors flex items-center justify-center ${
                       pkg.highlighted
                         ? "bg-secondary text-white hover:bg-secondary/90"

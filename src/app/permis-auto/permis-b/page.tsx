@@ -221,6 +221,7 @@ export default function PermisB() {
       />
 
       <PricingSection
+        permisType="Permis B"
         title="Nos forfaits permis B"
         packages={packages}
         includedItems={includedItems}

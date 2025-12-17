@@ -6,11 +6,16 @@ import { Suspense } from "react";
 
 function ContactFormWrapper() {
   const searchParams = useSearchParams();
-  const formule = searchParams.get("formule");
+  const permis = searchParams.get("permis");
+  const forfait = searchParams.get("forfait");
   const prix = searchParams.get("prix");
 
   return (
-    <ContactForm selectedFormula={formule || ""} selectedPrice={prix || ""} />
+    <ContactForm
+      selectedPermis={permis || ""}
+      selectedForfait={forfait || ""}
+      selectedPrice={prix || ""}
+    />
   );
 }
 
