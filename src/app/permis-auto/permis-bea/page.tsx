@@ -79,7 +79,7 @@ export default function PermisBEA() {
         "Code en salle illimité 6 mois",
         "Fournitures pédagogiques complètes",
         "13 leçons de conduite automatique",
-        "Présentation aux examens",
+        "Présentation à l'examen",
       ],
       highlighted: true,
       badge: "Le plus populaire",
@@ -93,7 +93,7 @@ export default function PermisBEA() {
         "Code en salle illimité 6 mois",
         "Fournitures pédagogiques complètes",
         "20 leçons de conduite automatique",
-        "Présentation aux examens",
+        "Présentation à l'examen",
         "Suivi renforcé personnalisé",
       ],
     },
@@ -132,17 +132,17 @@ export default function PermisBEA() {
       schedule: [
         {
           step: "À l'inscription",
-          amount: "300€",
+          amount: "320€",
           description: "Premier versement pour débuter la formation",
         },
         {
           step: "Au passage du code",
-          amount: "300€",
+          amount: "320€",
           description: "Deuxième versement après obtention du code",
         },
         {
           step: "À la 6ème leçon",
-          amount: "250€",
+          amount: "310€",
           description: "Solde à régler en cours de formation",
         },
       ],
@@ -152,17 +152,17 @@ export default function PermisBEA() {
       schedule: [
         {
           step: "À l'inscription",
-          amount: "480€",
+          amount: "465€",
           description: "Premier versement pour débuter la formation",
         },
         {
           step: "Au passage du code",
-          amount: "400€",
+          amount: "465€",
           description: "Deuxième versement après obtention du code",
         },
         {
           step: "À la 10ème leçon",
-          amount: "400€",
+          amount: "465€",
           description: "Solde à régler en cours de formation",
         },
       ],
@@ -170,8 +170,8 @@ export default function PermisBEA() {
   ];
 
   const additionalInfo = [
-    "Évaluation de départ gratuite pour évaluer précisément vos besoins en formation",
-    "Leçons supplémentaires disponibles à l'unité ou par forfait de 5 leçons",
+    "Évaluation de départ pour évaluer précisément vos besoins en formation",
+    "Leçons supplémentaires disponibles à l'unité (70€) ou par forfait de 5 leçons",
     "Taux de réussite exceptionnel de 82% au premier passage de l'examen",
     "Formation adaptée à votre rythme avec un suivi personnalisé constant",
     "Véhicules automatiques récents équipés de double commande et technologies de sécurité",

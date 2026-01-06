@@ -80,7 +80,7 @@ export default function ConduiteAccompagneeAutomatique() {
         "Fournitures pédagogiques complètes",
         "13 leçons de conduite automatique",
         "2 rendez-vous pédagogiques (1500km et 2500km)",
-        "Présentation aux examens",
+        "Présentation à l'examen",
         "Suivi durant toute la période d'accompagnement",
       ],
       highlighted: true,
@@ -96,7 +96,7 @@ export default function ConduiteAccompagneeAutomatique() {
         "Fournitures pédagogiques complètes",
         "20 leçons de conduite automatique",
         "2 rendez-vous pédagogiques (1500km et 2500km)",
-        "Présentation aux examens",
+        "Présentation à l'examen",
         "Suivi durant toute la période d'accompagnement",
         "Suivi renforcé personnalisé",
       ],
@@ -166,22 +166,22 @@ export default function ConduiteAccompagneeAutomatique() {
       schedule: [
         {
           step: "À l'inscription",
-          amount: "425€",
+          amount: "450€",
           description: "Premier versement pour débuter la formation",
         },
         {
           step: "Au passage du code",
-          amount: "425€",
+          amount: "450€",
           description: "Deuxième versement après obtention du code",
         },
         {
           step: "À la 10ème leçon",
-          amount: "425€",
+          amount: "450€",
           description: "Troisième versement en cours de formation",
         },
         {
           step: "À la 15ème leçon",
-          amount: "425€",
+          amount: "450€",
           description: "Solde à régler en cours de formation",
         },
       ],
@@ -189,7 +189,7 @@ export default function ConduiteAccompagneeAutomatique() {
   ];
 
   const additionalInfo = [
-    "Leçons supplémentaires disponibles à l'unité",
+    "Leçons supplémentaires disponibles à l'unité (70€)",
     "Taux de réussite exceptionnel de 95% au premier passage (vs 76% formation classique)",
     "Période probatoire réduite à 2 ans au lieu de 3 ans",
     "Accompagnement personnalisé durant toute la période de conduite accompagnée",

@@ -80,7 +80,7 @@ export default function ConduiteAccompagneeManuelle() {
         "Fournitures pédagogiques complètes",
         "20 leçons de conduite manuelle",
         "2 rendez-vous pédagogiques (1500km et 2500km)",
-        "Présentation aux examens",
+        "Présentation à l'examen",
         "Suivi durant toute la période d'accompagnement",
       ],
       highlighted: true,

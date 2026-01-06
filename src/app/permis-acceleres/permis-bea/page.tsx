@@ -78,7 +78,7 @@ export default function PermisBEAAccelere() {
         "Code en salle illimité 6 mois",
         "Fournitures pédagogiques complètes",
         "20 leçons de conduite automatique",
-        "Présentation aux examens",
+        "Présentation à l'examen",
         "Garantie 60 jours maximum",
       ],
       highlighted: true,
@@ -93,7 +93,7 @@ export default function PermisBEAAccelere() {
         "Code en salle illimité 6 mois",
         "Fournitures pédagogiques complètes",
         "30 leçons de conduite automatique",
-        "Présentation aux examens",
+        "Présentation à l'examen",
         "Suivi renforcé personnalisé",
         "Garantie 60 jours maximum",
       ],
@@ -122,7 +122,7 @@ export default function PermisBEAAccelere() {
       description: "20 ou 30 selon le forfait choisi",
     },
     {
-      label: "Présentation aux examens",
+      label: "Présentation à l'examen",
       included: true,
       description: "Code et conduite inclus",
     },
@@ -173,8 +173,8 @@ export default function PermisBEAAccelere() {
   const additionalInfo = [
     "Garantie 60 jours maximum (examen compris) sinon remboursement de la différence",
     "Formation intensive automatique avec créneaux prioritaires et planning dédié",
-    "Évaluation de départ gratuite pour évaluer précisément vos besoins",
-    "Leçons supplémentaires disponibles à l'unité ou par forfait de 5 leçons",
+    "Évaluation de départ pour évaluer précisément vos besoins",
+    "Leçons supplémentaires disponibles à l'unité (70€) ou par forfait de 5 leçons",
     "Taux de réussite exceptionnel de 88% au premier passage en formation accélérée",
     "Véhicules automatiques récents équipés de technologies de sécurité"
   ];

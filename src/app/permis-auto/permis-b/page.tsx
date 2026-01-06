@@ -79,7 +79,7 @@ export default function PermisB() {
         "Code en salle illimité 6 mois",
         "Fournitures pédagogiques complètes",
         "20 leçons de conduite",
-        "Présentation aux examens",
+        "Présentation à l'examen",
       ],
       highlighted: true,
       badge: "Le plus populaire",
@@ -93,7 +93,7 @@ export default function PermisB() {
         "Code en salle illimité 6 mois",
         "Fournitures pédagogiques complètes",
         "30 leçons de conduite",
-        "Présentation aux examens",
+        "Présentation à l'examen",
         "Suivi renforcé personnalisé",
       ],
     },
@@ -175,8 +175,8 @@ export default function PermisB() {
   ];
 
   const additionalInfo = [
-    "Évaluation de départ gratuite pour évaluer précisément vos besoins en formation",
-    "Leçons supplémentaires disponibles à l'unité (45€) ou par forfait de 5 leçons",
+    "Évaluation de départ pour évaluer précisément vos besoins en formation",
+    "Leçons supplémentaires disponibles à l'unité (65€) ou par forfait de 5 leçons",
     "Taux de réussite exceptionnel de 82% au premier passage de l'examen",
     "Formation adaptée à votre rythme avec un suivi personnalisé constant",
     "Véhicules école récents équipés de double commande et technologies de sécurité",

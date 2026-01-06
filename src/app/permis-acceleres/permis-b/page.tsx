@@ -174,8 +174,8 @@ export default function PermisBAccelere() {
   const additionalInfo = [
     "Garantie 60 jours maximum (examen compris) sinon remboursement de la différence",
     "Formation intensive avec créneaux prioritaires et planning dédié",
-    "Évaluation de départ gratuite pour évaluer précisément vos besoins",
-    "Leçons supplémentaires disponibles à l'unité (90€) ou par forfait de 5 leçons",
+    "Évaluation de départ pour évaluer précisément vos besoins",
+    "Leçons supplémentaires disponibles à l'unité (65€) ou par forfait de 5 leçons",
     "Taux de réussite exceptionnel de 88% au premier passage en formation accélérée",
     "Moniteurs spécialisés en formation intensive pour une progression optimale",
   ];
