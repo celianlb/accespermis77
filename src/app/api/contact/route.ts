@@ -8,7 +8,13 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { nom, prenom, email, telephone, formule, message } = body;
 
-    console.log("📧 Nouvelle demande de contact reçue:", { nom, prenom, email, telephone, formule });
+    console.log("📧 Nouvelle demande de contact reçue:", {
+      nom,
+      prenom,
+      email,
+      telephone,
+      formule,
+    });
 
     // Validation des champs obligatoires
     if (!nom || !prenom || !email || !telephone) {
@@ -33,7 +39,7 @@ export async function POST(request: NextRequest) {
     console.log("📤 Tentative d'envoi de l'email via Resend...");
     const { data, error } = await resend.emails.send({
       from: "Accès Permis 77 <onboarding@resend.dev>", // Remplacez par votre domaine vérifié sur Resend
-      to: ["celianlebacle06@gmail.com"], // Email de l'auto-école
+      to: ["accespermis77@gmail.com"], // Email de l'auto-école
       replyTo: email, // L'email du client pour pouvoir lui répondre directement
       subject: `Nouvelle demande de contact${formule ? ` - ${formule}` : ""}`,
       html: `
