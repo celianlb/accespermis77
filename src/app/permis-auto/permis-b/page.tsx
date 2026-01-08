@@ -121,7 +121,7 @@ export default function PermisB() {
       description: "20 ou 30 selon le forfait choisi",
     },
     {
-      label: "Inscription théorique",
+      label: "Évaluation de départ",
       price: "30€",
     },
   ];
@@ -176,7 +176,7 @@ export default function PermisB() {
 
   const additionalInfo = [
     "Évaluation de départ pour évaluer précisément vos besoins en formation",
-    "Leçons supplémentaires disponibles à l'unité (65€) ou par forfait de 5 leçons",
+    "Leçons supplémentaires disponibles à l'unité (65€)",
     "Taux de réussite exceptionnel de 82% au premier passage de l'examen",
     "Formation adaptée à votre rythme avec un suivi personnalisé constant",
     "Véhicules école récents équipés de double commande et technologies de sécurité",

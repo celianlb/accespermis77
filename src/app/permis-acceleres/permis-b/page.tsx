@@ -58,7 +58,7 @@ export default function PermisBAccelere() {
     {
       title: "Planning dédié",
       description:
-        "Créneaux réservés et flexibilité horaire pour une progression optimale et rapide",
+        "Créneaux réservés et flexibilité horaire pour une progression optimale et rapide, dimanche et jours fériés possible",
       icon: <FaClock />,
     },
     {
@@ -133,7 +133,7 @@ export default function PermisBAccelere() {
       description: "Remboursement si dépassement",
     },
     {
-      label: "Inscription théorique",
+      label: "Évaluation de départ",
       price: "30€",
     },
   ];
@@ -175,7 +175,7 @@ export default function PermisBAccelere() {
     "Garantie 60 jours maximum (examen compris) sinon remboursement de la différence",
     "Formation intensive avec créneaux prioritaires et planning dédié",
     "Évaluation de départ pour évaluer précisément vos besoins",
-    "Leçons supplémentaires disponibles à l'unité (65€) ou par forfait de 5 leçons",
+    "Leçons supplémentaires disponibles à l'unité (90€)",
     "Taux de réussite exceptionnel de 88% au premier passage en formation accélérée",
     "Moniteurs spécialisés en formation intensive pour une progression optimale",
   ];

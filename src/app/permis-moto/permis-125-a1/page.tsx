@@ -119,8 +119,7 @@ export default function Permis125A1() {
     },
     {
       label: "Évaluation de départ",
-      price: "25€",
-      description: "Obligatoire - non incluse dans le forfait",
+      price: "35€",
     },
     {
       label: "Code moto (ETM)",

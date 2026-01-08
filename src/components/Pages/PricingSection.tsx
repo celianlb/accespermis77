@@ -114,43 +114,77 @@ export default function PricingSection({
 
           {/* Included Items */}
           {includedItems.length > 0 && (
-            <div className="bg-white rounded-2xl shadow-sm p-8 mb-12">
-              <h3 className="text-xl font-semibold text-gray-800 mb-6">
-                Ce qui est inclus
-              </h3>
-              <div className="space-y-4">
-                {includedItems.map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex justify-between items-center py-2 border-b border-gray-100 last:border-b-0"
-                  >
-                    <div>
-                      <span className="text-gray-800 font-medium">
-                        {item.label}
-                      </span>
-                      {item.description && (
-                        <p className="text-gray-600 text-sm">
-                          {item.description}
-                        </p>
-                      )}
-                    </div>
-                    <div className="text-right">
-                      {item.price ? (
-                        <span className="font-bold text-gray-800">
-                          {item.price}
-                        </span>
-                      ) : item.included ? (
-                        <span className="text-green-600 font-semibold">
-                          ✓ Inclus
-                        </span>
-                      ) : (
-                        <span className="text-gray-500">En option</span>
-                      )}
-                    </div>
+            <>
+              {/* Section Inclus */}
+              {includedItems.filter(item => item.included).length > 0 && (
+                <div className="bg-white rounded-2xl shadow-sm p-8 mb-6">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-6">
+                    Ce qui est inclus
+                  </h3>
+                  <div className="space-y-4">
+                    {includedItems
+                      .filter(item => item.included)
+                      .map((item, index) => (
+                        <div
+                          key={index}
+                          className="flex justify-between items-center py-2 border-b border-gray-100 last:border-b-0"
+                        >
+                          <div>
+                            <span className="text-gray-800 font-medium">
+                              {item.label}
+                            </span>
+                            {item.description && (
+                              <p className="text-gray-600 text-sm">
+                                {item.description}
+                              </p>
+                            )}
+                          </div>
+                          <div className="text-right">
+                            <span className="text-green-600 font-semibold">
+                              ✓ Inclus
+                            </span>
+                          </div>
+                        </div>
+                      ))}
                   </div>
-                ))}
-              </div>
-            </div>
+                </div>
+              )}
+
+              {/* Section Non Inclus */}
+              {includedItems.filter(item => item.price).length > 0 && (
+                <div className="bg-white rounded-2xl shadow-sm p-8 mb-12">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-6">
+                    Non inclus
+                  </h3>
+                  <div className="space-y-4">
+                    {includedItems
+                      .filter(item => item.price)
+                      .map((item, index) => (
+                        <div
+                          key={index}
+                          className="flex justify-between items-center py-2 border-b border-gray-100 last:border-b-0"
+                        >
+                          <div>
+                            <span className="text-gray-800 font-medium">
+                              {item.label}
+                            </span>
+                            {item.description && (
+                              <p className="text-gray-600 text-sm">
+                                {item.description}
+                              </p>
+                            )}
+                          </div>
+                          <div className="text-right">
+                            <span className="font-bold text-gray-800">
+                              {item.price}
+                            </span>
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              )}
+            </>
           )}
 
           {/* Payment Schedule */}

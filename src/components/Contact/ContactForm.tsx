@@ -11,17 +11,17 @@ interface ContactFormProps {
 // Définition des formules par permis
 const FORMULES_PAR_PERMIS: Record<string, string[]> = {
   "Permis B": ["Forfait 20h", "Forfait 30h"],
-  "Permis BEA (Boîte automatique)": ["Forfait 20h", "Forfait 30h"],
-  "Conduite accompagnée manuelle": ["Formation complète"],
-  "Conduite accompagnée automatique": ["Formation complète"],
+  "Permis BEA (Boîte automatique)": ["Forfait 13h", "Forfait 20h"],
+  "Conduite accompagnée manuelle": ["Forfait AAC 20h"],
+  "Conduite accompagnée automatique": ["Forfait AAC 13h", "Forfait AAC 20h"],
   "Formation AM": ["Formation complète"],
   "Passerelle BEA vers B": ["Formation 7h"],
   "Permis A2": ["Formation complète"],
   "Permis 125 A1": ["Formation complète"],
   "Passerelle A2 vers A": ["Formation 7h"],
   "Formation 125": ["Formation 7h"],
-  "Permis B Accéléré": ["Forfait 20h", "Forfait 30h"],
-  "Permis BEA Accéléré": ["Forfait 20h", "Forfait 30h"],
+  "Permis B Accéléré": ["Forfait Accéléré 20h", "Forfait Accéléré 30h"],
+  "Permis BEA Accéléré": ["Forfait Accéléré BEA 13h"],
   "Code de la route": ["Formation complète"],
 };
 

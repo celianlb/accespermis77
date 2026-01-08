@@ -57,7 +57,7 @@ export default function PermisBEAAccelere() {
     {
       title: "Planning dédié",
       description:
-        "Créneaux réservés et flexibilité horaire pour une progression optimale et rapide",
+        "Créneaux réservés et flexibilité horaire pour une progression optimale et rapide, dimanche et jours fériés possible",
       icon: <FaClock />,
     },
     {
@@ -70,33 +70,19 @@ export default function PermisBEAAccelere() {
 
   const packages = [
     {
-      name: "Forfait Accéléré BEA 20h",
-      price: "1846€",
-      duration: "Code + 20 leçons",
+      name: "Forfait Accéléré BEA 13h",
+      price: "1500€",
+      duration: "Code + 13 leçons",
       features: [
         "Démarches administratives incluses",
         "Code en salle illimité 6 mois",
         "Fournitures pédagogiques complètes",
-        "20 leçons de conduite automatique",
+        "13 leçons de conduite automatique",
         "Présentation à l'examen",
         "Garantie 60 jours maximum",
       ],
       highlighted: true,
-      badge: "Le plus populaire",
-    },
-    {
-      name: "Forfait Accéléré BEA 30h",
-      price: "2376€",
-      duration: "Code + 30 leçons",
-      features: [
-        "Démarches administratives incluses",
-        "Code en salle illimité 6 mois",
-        "Fournitures pédagogiques complètes",
-        "30 leçons de conduite automatique",
-        "Présentation à l'examen",
-        "Suivi renforcé personnalisé",
-        "Garantie 60 jours maximum",
-      ],
+      badge: "Formule unique",
     },
   ];
 
@@ -119,7 +105,7 @@ export default function PermisBEAAccelere() {
     {
       label: "Leçons de conduite automatique",
       included: true,
-      description: "20 ou 30 selon le forfait choisi",
+      description: "13 leçons de formation initiale",
     },
     {
       label: "Présentation à l'examen",
@@ -132,38 +118,23 @@ export default function PermisBEAAccelere() {
       description: "Remboursement si dépassement",
     },
     {
-      label: "Inscription théorique",
-      price: "30€",
+      label: "Évaluation de départ",
+      price: "35€",
     },
   ];
 
   const paymentOptions = [
     {
-      hours: "Forfait Accéléré BEA 20h",
+      hours: "Forfait Accéléré BEA 13h",
       schedule: [
         {
           step: "À l'inscription",
-          amount: "900€",
+          amount: "750€",
           description: "Premier versement pour débuter la formation",
         },
         {
-          step: "À la 10ème leçon",
-          amount: "946€",
-          description: "Solde à régler en cours de formation",
-        },
-      ]
-    },
-    {
-      hours: "Forfait Accéléré BEA 30h",
-      schedule: [
-        {
-          step: "À l'inscription",
-          amount: "1188€",
-          description: "Premier versement pour débuter la formation",
-        },
-        {
-          step: "À la 15ème leçon",
-          amount: "1188€",
+          step: "À la 6ème leçon",
+          amount: "750€",
           description: "Solde à régler en cours de formation",
         },
       ]
@@ -174,7 +145,7 @@ export default function PermisBEAAccelere() {
     "Garantie 60 jours maximum (examen compris) sinon remboursement de la différence",
     "Formation intensive automatique avec créneaux prioritaires et planning dédié",
     "Évaluation de départ pour évaluer précisément vos besoins",
-    "Leçons supplémentaires disponibles à l'unité (70€) ou par forfait de 5 leçons",
+    "Leçons supplémentaires disponibles à l'unité (95€)",
     "Taux de réussite exceptionnel de 88% au premier passage en formation accélérée",
     "Véhicules automatiques récents équipés de technologies de sécurité"
   ];
@@ -188,14 +159,9 @@ export default function PermisBEAAccelere() {
         icon={<FaCar />}
         pricing={[
           {
-            title: "Forfait Accéléré BEA 20h",
-            price: 1846,
-            hours: "Code + 20 leçons"
-          },
-          {
-            title: "Forfait Accéléré BEA 30h", 
-            price: 2376,
-            hours: "Code + 30 leçons"
+            title: "Forfait Accéléré BEA 13h",
+            price: 1500,
+            hours: "Code + 13 leçons"
           }
         ]}
         conditions={conditions}

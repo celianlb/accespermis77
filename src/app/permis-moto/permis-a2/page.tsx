@@ -122,6 +122,10 @@ export default function PermisA2() {
       included: true,
       description: "Frais d'accompagnement inclus",
     },
+    {
+      label: "Évaluation de départ",
+      price: "35€",
+    },
   ];
 
   const paymentOptions = [

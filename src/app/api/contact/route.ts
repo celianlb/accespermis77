@@ -8,8 +8,11 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { nom, prenom, email, telephone, formule, message } = body;
 
+    console.log("📧 Nouvelle demande de contact reçue:", { nom, prenom, email, telephone, formule });
+
     // Validation des champs obligatoires
     if (!nom || !prenom || !email || !telephone) {
+      console.error("❌ Validation échouée: champs manquants");
       return NextResponse.json(
         { error: "Tous les champs obligatoires doivent être remplis" },
         { status: 400 }
@@ -19,6 +22,7 @@ export async function POST(request: NextRequest) {
     // Validation de l'email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
+      console.error("❌ Validation échouée: email invalide");
       return NextResponse.json(
         { error: "L'adresse email n'est pas valide" },
         { status: 400 }
@@ -26,9 +30,10 @@ export async function POST(request: NextRequest) {
     }
 
     // Envoi de l'email avec Resend
-    await resend.emails.send({
+    console.log("📤 Tentative d'envoi de l'email via Resend...");
+    const { data, error } = await resend.emails.send({
       from: "Accès Permis 77 <onboarding@resend.dev>", // Remplacez par votre domaine vérifié sur Resend
-      to: ["accespermis77@gmail.com"], // Email de l'auto-école
+      to: ["celianlebacle06@gmail.com"], // Email de l'auto-école
       replyTo: email, // L'email du client pour pouvoir lui répondre directement
       subject: `Nouvelle demande de contact${formule ? ` - ${formule}` : ""}`,
       html: `
@@ -122,6 +127,16 @@ export async function POST(request: NextRequest) {
       `,
     });
 
+    if (error) {
+      console.error("❌ Erreur Resend:", error);
+      return NextResponse.json(
+        { error: "Erreur lors de l'envoi de l'email", details: error },
+        { status: 500 }
+      );
+    }
+
+    console.log("✅ Email envoyé avec succès:", data);
+
     return NextResponse.json(
       {
         message: "Votre demande a été envoyée avec succès",
@@ -130,7 +145,7 @@ export async function POST(request: NextRequest) {
       { status: 200 }
     );
   } catch (error) {
-    console.error("Erreur lors du traitement de la demande:", error);
+    console.error("❌ Erreur lors du traitement de la demande:", error);
     return NextResponse.json(
       { error: "Une erreur est survenue lors du traitement de votre demande" },
       { status: 500 }

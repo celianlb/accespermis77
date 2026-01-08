@@ -133,6 +133,10 @@ export default function ConduiteAccompagneeAutomatique() {
       included: true,
       description: "RDV à 1500km et 2500km (2h chacun)",
     },
+    {
+      label: "Évaluation de départ",
+      price: "35€",
+    },
   ];
 
   const paymentOptions = [
@@ -150,12 +154,12 @@ export default function ConduiteAccompagneeAutomatique() {
           description: "Deuxième versement après obtention du code",
         },
         {
-          step: "À la 10ème leçon",
+          step: "À la 1ère leçon",
           amount: "375€",
           description: "Troisième versement en cours de formation",
         },
         {
-          step: "À la 18ème leçon",
+          step: "À la 6ème leçon",
           amount: "375€",
           description: "Solde à régler en fin de formation",
         },
@@ -175,12 +179,12 @@ export default function ConduiteAccompagneeAutomatique() {
           description: "Deuxième versement après obtention du code",
         },
         {
-          step: "À la 10ème leçon",
+          step: "À la 1ère leçon",
           amount: "450€",
           description: "Troisième versement en cours de formation",
         },
         {
-          step: "À la 15ème leçon",
+          step: "À la 6ème leçon",
           amount: "450€",
           description: "Solde à régler en cours de formation",
         },

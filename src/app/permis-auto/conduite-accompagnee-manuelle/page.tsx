@@ -118,6 +118,10 @@ export default function ConduiteAccompagneeManuelle() {
       included: true,
       description: "RDV à 1500km et 2500km (2h chacun)",
     },
+    {
+      label: "Évaluation de départ",
+      price: "30€",
+    },
   ];
 
   const paymentOptions = [
