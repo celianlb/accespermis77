@@ -73,13 +73,18 @@ export default function ToutesLesOffres() {
           href: "/permis-auto/permis-b",
         },
         {
-          name: "Permis B - Boîte Automatique (BEA)",
+          name: "Permis BEA - Boîte Automatique",
           description: "Formation adaptée aux boîtes automatiques",
           pricing: [
             {
               hours: "Code + 13h",
               price: 950,
-              description: "Formation minimum légale",
+              description: "Forfait minimum légal",
+            },
+            {
+              hours: "Code + 20h",
+              price: 1395,
+              description: "Forfait renforcé",
             },
           ],
           features: [
@@ -91,21 +96,45 @@ export default function ToutesLesOffres() {
           href: "/permis-auto/permis-bea",
         },
         {
-          name: "Conduite Accompagnée",
+          name: "Conduite Accompagnée Manuelle",
           description: "Formation précoce dès 15 ans avec accompagnateur",
           pricing: [
             {
               hours: "Code + 20h + suivi",
-              price: 1380,
-              description: "Formation complète + RDV",
+              price: 1695,
+              description: "Formation complète + 2 RDV",
+            },
+          ],
+          features: [
+            "Formation initiale 20h",
+            "2 Rendez-vous pédagogiques",
+            "Suivi personnalisé",
+            "Période probatoire réduite",
+          ],
+          href: "/permis-auto/conduite-accompagnee-manuelle",
+        },
+        {
+          name: "Conduite Accompagnée Automatique",
+          description: "AAC sur boîte automatique dès 15 ans",
+          pricing: [
+            {
+              hours: "Code + 13h + suivi",
+              price: 1500,
+              description: "Forfait AAC 13h",
+            },
+            {
+              hours: "Code + 20h + suivi",
+              price: 1800,
+              description: "Forfait AAC 20h",
             },
           ],
           features: [
             "Formation initiale",
-            "Rendez-vous pédagogiques",
+            "2 Rendez-vous pédagogiques",
             "Suivi personnalisé",
+            "Période probatoire réduite",
           ],
-          href: "/permis-auto/conduite-accompagnee-manuelle",
+          href: "/permis-auto/conduite-accompagnee-automatique",
         },
         {
           name: "Formation AM (BSR)",
@@ -206,25 +235,49 @@ export default function ToutesLesOffres() {
     {
       title: "Formations Accélérées",
       icon: <FaGraduationCap />,
-      description: "Formations intensives pour obtenir rapidement son permis",
+      description: "Formations intensives avec garantie 60 jours maximum",
       bgColor: "bg-white",
       offers: [
         {
           name: "Permis B Accéléré",
-          description: "Formation intensive sur 2-3 semaines",
+          description: "Formation intensive boîte manuelle - Garantie 60 jours",
           pricing: [
             {
               hours: "Code + 20h intensif",
-              price: 1580,
-              description: "Formation accélérée",
+              price: 2150,
+              description: "Forfait Accéléré 20h",
+            },
+            {
+              hours: "Code + 30h intensif",
+              price: 3000,
+              description: "Forfait Accéléré 30h",
             },
           ],
           features: [
-            "Formation accélérée",
-            "Cours quotidiens",
-            "Passage rapide",
+            "Garantie 60 jours maximum",
+            "Formation 7j/7 possible",
+            "Créneaux prioritaires",
+            "Planning dédié",
           ],
           href: "/permis-acceleres/permis-b",
+        },
+        {
+          name: "Permis BEA Accéléré",
+          description: "Formation intensive boîte automatique - Garantie 60 jours",
+          pricing: [
+            {
+              hours: "Code + 13h intensif",
+              price: 1500,
+              description: "Forfait Accéléré BEA 13h",
+            },
+          ],
+          features: [
+            "Garantie 60 jours maximum",
+            "Formation 7j/7 possible",
+            "Boîte automatique",
+            "Planning dédié",
+          ],
+          href: "/permis-acceleres/permis-bea",
         },
       ],
     },
@@ -273,6 +326,12 @@ export default function ToutesLesOffres() {
       price: 35,
       unit: "la séance",
       description: "Évaluation initiale pour déterminer le niveau",
+    },
+    {
+      service: "Code moto (ETM)",
+      price: 30,
+      unit: "le passage",
+      description: "À prévoir en supplément",
     },
     {
       service: "Leçon de conduite boîte manuelle",

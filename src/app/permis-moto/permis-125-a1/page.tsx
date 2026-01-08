@@ -118,13 +118,13 @@ export default function Permis125A1() {
       description: "Inscription et présentation incluses",
     },
     {
-      label: "Évaluation de départ",
-      price: "35€",
+      label: "Code moto (ETM)",
+      price: "30€",
+      description: "À prévoir en supplément",
     },
     {
-      label: "Code moto (ETM)",
-      price: "Variable",
-      description: "À prévoir en supplément",
+      label: "Évaluation de départ",
+      price: "35€",
     },
   ];
 

@@ -123,6 +123,11 @@ export default function PermisA2() {
       description: "Frais d'accompagnement inclus",
     },
     {
+      label: "Code moto (ETM)",
+      price: "30€",
+      description: "À prévoir en supplément",
+    },
+    {
       label: "Évaluation de départ",
       price: "35€",
     },
